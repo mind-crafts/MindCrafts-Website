@@ -1,4 +1,5 @@
 body {
+    padding-top: 100px;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     font-weight: bold;
@@ -6,10 +7,14 @@ body {
     text-align: justify;
     max-width: 90%;
     margin: auto;
+    padding-bottom: 100px; /* Ensures space for the footer */
+    min-height: 100vh; /* Makes sure the body takes up the full page */
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
-    margin: 30px;
+    margin: 50px;
     font-weight: bold;
     text-align: center;
 }
@@ -47,11 +52,16 @@ li {
 }
 
 header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
+    padding: 20px 0; /* Adjust padding for better spacing */
     text-align: center;
-    border-radius: 100px;
+    z-index: 1000;
+    margin-bottom: 20px;
 }
 
 button {
@@ -69,14 +79,49 @@ button:hover {
 }
 
 footer {
-    background-color: #4CAF50;
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 50px 20px;
-    position: absolute;
+    padding-bottom: 30px;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    margin-top: 100px;
-    min-height: 100px;
+    margin-top: auto;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: padding 0.3s ease-in-out;
+}
+
+footer:hover {
+    padding: 40px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    padding: 20px 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: font-size 0.3s ease-in-out;
+}
+
+nav.shrink {
+    padding: 10px 0; /* Reduce padding but keep width */
+}
+
+nav.shrink a {
+    font-size: 16px; /* Reduce text size slightly */
 }
