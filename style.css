@@ -1,0 +1,127 @@
+body {
+    padding-top: 100px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-weight: bold;
+    color: #333;
+    text-align: justify;
+    max-width: 90%;
+    margin: auto;
+    padding-bottom: 100px; /* Ensures space for the footer */
+    min-height: 100vh; /* Makes sure the body takes up the full page */
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+h3 {
+    margin-right: 100px;
+    margin-left: 100px;
+    font-weight: bold;
+}
+
+p {
+    margin-right: 100px;
+    margin-left: 100px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 40px;
+}
+
+li {
+    margin-right: 100px;
+    margin-left: 100px;
+    font-size: 16px;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0; /* Adjust padding for better spacing */
+    text-align: center;
+    z-index: 1000;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding-bottom: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: auto;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: padding 0.3s ease-in-out;
+}
+
+footer:hover {
+    padding: 40px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    padding: 20px 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: font-size 0.3s ease-in-out;
+}
+
+nav.shrink {
+    padding: 10px 0; /* Reduce padding but keep width */
+}
+
+nav.shrink a {
+    font-size: 16px; /* Reduce text size slightly */
+}
