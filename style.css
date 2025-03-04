@@ -1,5 +1,5 @@
 body {
-    padding-top: 60px; 
+    padding-top: 100px; 
     font-family: Arial, sans-serif;
     line-height: 1.6;
     font-weight: bold;
@@ -20,6 +20,9 @@ h1 {
     margin: 50px;
     font-weight: bold;
     text-align: center;
+    font-size: 32px;
+    margin-top: 80px;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -113,22 +116,17 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding-bottom: 30px;
+    padding: 10px;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    margin-top: auto;
-    min-height: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    transition: padding 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 footer:hover {
-    background-color: #444;
-    padding: 35px;
+    padding: 20px; /* This should now animate */
+    transform: scale(1.05);
 }
 
 /* Responsive Design */
