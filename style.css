@@ -74,7 +74,7 @@ nav {
     background-color: #4CAF50;
     padding: 20px 0;
     text-align: center;
-    transition: all 0.3s ease-in-out;
+    transition: padding 0.3s ease-in-out, height 0.3s ease-in-out;
     z-index: 1000;
 }
 
@@ -127,7 +127,8 @@ footer {
 }
 
 footer:hover {
-    transform: scale(1.1);
+    background-color: #444;
+    padding: 35px;
 }
 
 /* Responsive Design */
