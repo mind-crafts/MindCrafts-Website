@@ -1,13 +1,14 @@
 body {
-    padding-top: 100px; /* Space for fixed header */
+    padding-top: 60px; 
     font-family: Arial, sans-serif;
+    header: 60px;
     line-height: 1.6;
     font-weight: bold;
     color: #333;
     text-align: justify;
     max-width: 100%;
     margin: auto;
-    padding-bottom: 60px; /* Space for footer */
+    padding-bottom: 60px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,6 +18,7 @@ body {
 
 /* Headings */
 h1, h2, h3 {
+    margin-top: 80px;
     text-align: center;
     font-weight: bold;
     margin: 20px auto;
