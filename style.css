@@ -57,7 +57,6 @@ li {
 /* Header & Navigation */
 header {
     width: 100%;
-    position: fixed;
     top: 0;
     left: 0;
     background-color: #4CAF50;
@@ -82,7 +81,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     margin: 0 15px;
     display: inline-block;
 }
@@ -128,28 +127,21 @@ footer {
 }
 
 footer:hover {
-    padding: 40px;
+    transform: scale(1.1);
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1024px) { /* Tablets and smaller desktops */
-    body {
-        padding-top: 80px;
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
+@media screen and (max-width: 768px) { /* Mobile screens */
     h1, h2, h3 {
-        font-size: 20px;
-        margin: 15px auto;
+        font-size: 18px;
+        margin: 10px auto;
     }
 
     p, li {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     nav {
-        padding: 12px 0;
+        padding: 10px 0;
     }
-
-    nav a
+}
