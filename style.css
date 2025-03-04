@@ -52,6 +52,24 @@ h3 {
     font-weight: bold;
 }
 
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px; /* Adjust this value to properly contain the text */
+    background-color: darkgreen;
+    padding: 0; /* Ensure no extra padding */
+    margin: 0;
+}
+
+.header-container h1 {
+    margin: 0;
+    padding: 0;
+    color: white; /* Ensure text is visible */
+    font-size: 2em; /* Adjust size as needed */
+    text-align: center;
+}
+
 p {
     margin-right: 100px;
     margin-left: 100px;
