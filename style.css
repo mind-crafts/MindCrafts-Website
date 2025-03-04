@@ -49,9 +49,13 @@ header, nav {
     left: 0;
     background-color: #4CAF50;
     color: white;
-    padding: 15px 0;
+    padding: 20px 0;
     text-align: center;
     z-index: 1000;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center:
 }
 
 nav a {
@@ -59,7 +63,7 @@ nav a {
     text-decoration: none;
     font-size: 18px;
     margin: 0 15px;
-    transition: font-size 0.3s ease-in-out;
+    display; inline-block;
 }
 
 /* Shrinking Navigation on Scroll */
@@ -102,7 +106,7 @@ footer {
 /* Responsive Design */
 @media screen and (max-width: 1024px) { /* Tablets and smaller desktops */
     body {
-        padding-top: 70px;
+        padding-top: 80px;
         padding-left: 5%;
         padding-right: 5%;
     }
