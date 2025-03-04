@@ -1,7 +1,6 @@
 body {
     padding-top: 60px; 
     font-family: Arial, sans-serif;
-
     line-height: 1.6;
     font-weight: bold;
     color: #333;
@@ -49,11 +48,13 @@ header, nav {
     left: 0;
     background-color: #4CAF50;
     color: white;
-    padding: 20px 0;
+    align-text: center;
+    padding: 10px 0;
     text-align: center;
     z-index: 1000;
     height: 60px;
-    display: flex; align-items: center;
+    display: flex; 
+    align-items: center;
     justify-content: center;
     line-height: 60px;
 }
@@ -66,7 +67,6 @@ nav a {
     display: inline-block;
 }
 
-/* Shrinking Navigation on Scroll */
 nav.shrink {
     padding: 10px 0;
 }
@@ -75,7 +75,6 @@ nav.shrink a {
     font-size: 16px;
 }
 
-/* Buttons */
 button {
     padding: 10px 15px;
     font-size: 14px;
