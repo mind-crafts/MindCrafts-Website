@@ -79,7 +79,7 @@ nav {
     left: 0;
     background-color: green; 
     display: flex;
-    justify-content: space-between; /* Centers the nav items */
+    justify-content: center; /* Centers the nav items */
     align-items: center; /* Ensures vertical centering */
     height: 70px;
 }
