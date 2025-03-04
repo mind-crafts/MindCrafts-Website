@@ -71,16 +71,15 @@ header {
 
 nav {
     width: 100%;
-    margin: 0;
-    padding: 10px 20px;
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     background-color: green; 
     display: flex;
     justify-content: center; /* Centers the nav items */
-    align-items: center; /* Ensures vertical centering */
+    align-items: center;
     height: 70px;
+    z-index: 1000;
 }
 
 nav ul {
@@ -88,62 +87,23 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Ensures the links are centered */
-    width: 100%;
-    max-width: 600px; /* Prevents items from stretching too much */
+    justify-content: center;
+    gap: 30px; /* Adds spacing between items */
 }
 
 nav ul li {
-    margin: 0 15px;
-}
-
-nav a {
-    text-decoration: none; /* Removes underline from links */
-    color: white; /* Adjust color to fit your theme */
-    font-size: 18px; /* Increase font size for visibility */
-    font-weight: bold;
-}
-
-a {
-    text-decoration: none; /* Remove underline globally */
-    color: inherit; /* Use default text color instead of blue */
-}
-
-.navbar {
-    position: fixed; /* Stays at the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent */
-    padding: 15px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex; /* Makes items go horizontal */
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-links li {
     display: inline;
 }
 
-.nav-links a {
+nav a {
     text-decoration: none;
-    color: black;
-    font-weight: bold;
+    color: white;
     font-size: 18px;
+    font-weight: bold;
     transition: 0.3s;
 }
 
-.nav-links a:hover {
+nav a:hover {
     color: orange;
 }
 
