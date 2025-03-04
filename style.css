@@ -1,5 +1,5 @@
 body {
-    padding-top: 100px; 
+    padding-top: 120px; 
     font-family: Arial, sans-serif;
     line-height: 1.6;
     font-weight: bold;
@@ -96,6 +96,7 @@ nav {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     transition: all 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 nav ul {
