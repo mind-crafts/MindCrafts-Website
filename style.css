@@ -10,7 +10,6 @@ body {
     padding-bottom: 60px;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -110,6 +109,44 @@ a {
     color: inherit; /* Use default text color instead of blue */
 }
 
+.navbar {
+    position: fixed; /* Stays at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent */
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex; /* Makes items go horizontal */
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: orange;
+}
+
 nav.shrink {
     padding: 10px 0;
 }
@@ -170,11 +207,9 @@ footer:hover {
     nav {
         height: auto; /* Allow navbar to expand */
         padding: 15px;
-        flex-direction: column;
     }
 
     nav ul {
-        flex-direction: column; /* Stack links vertically on small screens */
         align-items: center;
         display: flex;
         width: auto;
