@@ -1,5 +1,5 @@
 body {
-    padding-top: 100px; 
+    padding-top: 80px; 
     font-family: Arial, sans-serif;
     line-height: 1.6;
     font-weight: bold;
@@ -91,6 +91,7 @@ nav ul {
     display: flex;
     justify-content: center; /* Ensures the links are centered */
     width: 100%;
+    max-width: 600px; /* Prevents items from stretching too much */
 }
 
 nav ul li {
@@ -168,13 +169,15 @@ footer:hover {
 
     nav {
         height: auto; /* Allow navbar to expand */
-        padding: 10px 0;
+        padding: 15px;
+        flex-direction: column;
     }
 
     nav ul {
         flex-direction: column; /* Stack links vertically on small screens */
         align-items: center;
         display: flex;
+        width: auto;
     }
 
     nav ul li {
