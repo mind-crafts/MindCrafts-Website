@@ -89,6 +89,8 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 30px; /* Adds spacing between items */
+    flex-direction: row;
+    align-items: center;
 }
 
 nav ul li {
