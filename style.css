@@ -73,12 +73,16 @@ header {
 nav {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background-color: #4CAF50;
     padding: 20px 0;
     text-align: center;
     transition: padding 0.3s ease-in-out, height 0.3s ease-in-out;
     z-index: 1000;
+    height: 60px;
+    line-height: 60px;
+    margin: 0;
 }
 
 nav a {
