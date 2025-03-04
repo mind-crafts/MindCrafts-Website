@@ -1,5 +1,5 @@
 body {
-    padding-top: 80px; 
+    padding-top: 100px; 
     font-family: Arial, sans-serif;
     line-height: 1.6;
     font-weight: bold;
@@ -10,6 +10,7 @@ body {
     padding-bottom: 60px;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -71,15 +72,16 @@ header {
 
 nav {
     width: 100%;
-    position: fixed;
+    margin: 0;
+    padding: 0;
+    position: fixed; 
     top: 0;
     left: 0;
     background-color: green; 
     display: flex;
     justify-content: center; /* Centers the nav items */
-    align-items: center;
-    height: 70px;
-    z-index: 1000;
+    align-items: center; /* Ensures vertical centering */
+    height: 60px;
 }
 
 nav ul {
@@ -87,26 +89,20 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 30px; /* Adds spacing between items */
-    flex-direction: row;
-    align-items: center;
+    justify-content: center; /* Ensures the links are centered */
+    width: 100%;
 }
 
 nav ul li {
-    display: inline;
+    margin: 0 15px;
 }
 
-nav a {
+nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
     font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: orange;
+    padding: 10px 15px;
+    display: inline-block;
 }
 
 nav.shrink {
@@ -151,33 +147,16 @@ footer:hover {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) { /* Mobile screens */
-    h1 {
-        font-size: 24px; /* Slightly smaller for readability */
-        margin: 40px 10px 15px 10px; /* Adjust margins for smaller screens */
+    h1, h2, h3 {
+        font-size: 18px;
+        margin: 10px auto;
     }
-
-    h2, h3 {
-        font-size: 18px; /* Smaller for mobile */
-        margin: 50px 20px; /* Reduce margins to fit screen */
-    }
-}
 
     p, li {
         font-size: 14px;
     }
 
     nav {
-        height: auto; /* Allow navbar to expand */
-        padding: 15px;
+        padding: 10px 0;
     }
-
-    nav ul {
-        align-items: center;
-        display: flex;
-        width: auto;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-        text-align: center;/* Add vertical spacing */
 }
