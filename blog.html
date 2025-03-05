@@ -5,12 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs n' Vlogs | MindCrafts</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styling for selection section */
+        #content-selection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            gap: 20px;
+        }
+
+        .content-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            background: #f4f4f4;
+            border-radius: 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-box:hover {
+            padding-bottom: 20px;
+            background: #ddd;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
 
     <!-- Logo (Click to go to Home) -->
     <a href="index.html" class="logo">
-        <img src="images/mindcraft_logo.png" height="60" width="60" alt="MindCrafts Logo">
+        <img src="images/mindcraft logo.png" height="60" width="60" alt="MindCrafts Logo">
     </a>
 
     <header>
@@ -25,43 +57,11 @@
 
     <!-- Selection Section -->
     <section id="content-selection">
-        <h2>Explore Our Content</h2>
-        <p>Choose between our in-depth development blogs or our engaging video content!</p>
-        
-        <div class="content-options">
-            <a href="devblogs.html" class="content-box">
-                <h3>DevBlogs</h3>
-                <p>Read about our latest projects, website updates, and creative insights.</p>
-            </a>
-
-            <a href="videos.html" class="content-box">
-                <h3>Videos</h3>
-                <p>Watch our latest DIY tutorials, upcycling projects, and community highlights.</p>
-            </a>
-        </div>
-    </section>
-
-    <section id="blog-container">
-        <h2>Welcome to MindCrafts: Turning Trash into Treasure!</h2>
-        <p>In a world where waste continues to pile up, it is our duty as students to bring positive change to our environment. MindCrafts is here to make that difference! Our platform is dedicated to transforming discarded items into valuable creations. Whether you're passionate about sustainability, love DIY projects, or want to turn your crafts into cash, this is the perfect place to start!</p>
-
-        <h2>What is MindCrafts?</h2>
-        <p>MindCrafts is more than just a website; it’s a movement. We believe creativity and innovation can help solve the growing waste problem. By upcycling and repurposing materials that would otherwise be thrown away, we breathe new life into trash while reducing environmental impact.</p>
-
-        <h2>How Can You Get Involved?</h2>
-        <ul>
-            <li><strong>Explore Ideas</strong> – Browse creative projects that turn everyday waste into useful items.</li>
-            <li><strong>Share Your Creations</strong> – Show off your upcycled crafts and inspire others.</li>
-            <li><strong>Learn & Grow</strong> – Discover new techniques through our DIY guides and community discussions.</li>
-            <li><strong>Sell & Earn</strong> – Turn your passion into profit by selling your handmade crafts.</li>
-        </ul>
-
-        <h2>Why Upcycling Matters</h2>
-        <p>Each year, tons of garbage end up in landfills, worsening pollution and climate change. By upcycling, we reduce waste, conserve resources, and promote sustainability. At MindCrafts, we believe that one person’s trash is another’s treasure!</p>
-
-        <p>Join us and turn waste into something meaningful, creative, and profitable. Let’s turn trash into cash!</p>
+        <a href="devblogs.html" class="content-box">DevBlogs</a>
+        <a href="videos.html" class="content-box">Videos</a>
     </section>
 
 <script src="footer.js"></script>
 </body>
 </html>
+
