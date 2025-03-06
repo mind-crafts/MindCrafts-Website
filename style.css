@@ -96,7 +96,8 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #4CAF50;
+    background: url('https://grumpysushi.github.io/MindCrafts-Website/images/prototypeimage.jpg') no-repeat center;
+    background-size: cover; /* Ensures the image covers the full width */
     color: white;
     padding: 20px 0; /* Adjust padding for better spacing */
     text-align: center;
