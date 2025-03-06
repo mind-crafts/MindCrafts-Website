@@ -104,9 +104,12 @@ header {
 }
 
 .text-overlay {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark */
     padding: 10px 20px;
     border-radius: 10px;
+    backdrop-filter: blur(8px); /* Blurs the background */
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    display: inline-block;
 }
 
 nav {
