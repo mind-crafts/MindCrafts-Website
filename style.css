@@ -23,13 +23,12 @@ body {
 /* Headings */
 h1, .main-heading {
     width: 100%;
-    height: 150px;
+    height: 300px; /* Increase height for a bigger image */
     display: flex;
     align-items: center;
     justify-content: center;
     background: url('https://grumpysushi.github.io/MindCrafts-Website/images/prototypeimage.jpg') no-repeat center;
-    background-position: center top; /* Aligns better */
-    background-color: #4CAF50; /* Fallback color */
+    background-size: cover; /* Ensures the image covers the full width */
     color: white;
     font-size: 40px;
     font-weight: bold;
