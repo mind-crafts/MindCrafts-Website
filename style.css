@@ -103,6 +103,12 @@ header {
     margin-bottom: 20px;
 }
 
+.text-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
 nav {
     position: fixed;
     top: 0;
