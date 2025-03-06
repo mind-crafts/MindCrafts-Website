@@ -16,8 +16,8 @@ body {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     transition: all 0.3s ease-in-out;
-	background-size: cover;
     background-position: center;
+	background-size: cover;
 }
 
 /* Headings */
@@ -28,7 +28,6 @@ h1, .main-heading {
     align-items: center;
     justify-content: center;
     background: url('https://grumpysushi.github.io/MindCrafts-Website/images/prototypeimage.jpg') no-repeat center;
-    background-size: contain; /* Keeps the aspect ratio */
     background-position: center top; /* Aligns better */
     background-color: #4CAF50; /* Fallback color */
     color: white;
