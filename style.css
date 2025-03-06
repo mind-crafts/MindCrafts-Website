@@ -21,16 +21,16 @@ body {
 /* Headings */
 h1, .main-heading {
     width: 100%; /* Full width */
-    height: 150px; /* Increase height upwards */
+    height: 200px; /* Increase height upwards */
     display: flex;
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
-    background-color: rgba(0, 128, 0, 0.8); /* Match navbar color */
+    background: url('prototypeimage.jpg') no-repeat center center/cover;
     color: white;
     font-size: 40px;
     font-weight: bold;
     margin: 0; /* Remove default margin */
-    padding-top: 50px; /* Push text up */
+    padding: 20px; /* Push text up */
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     transition: all 0.3s ease-in-out;
@@ -184,7 +184,12 @@ footer:hover {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) { /* Mobile screens */
-    h1, h2, h3 {
+   h1, .main-heading {
+        min-height: 150px;
+        font-size: 30px;
+    }
+
+    h2, h3 {
         font-size: 18px;
         margin: 10px auto;
     }
