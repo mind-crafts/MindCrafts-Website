@@ -25,7 +25,8 @@ h1, .main-heading {
     display: flex;
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
-    background: url('https://grumpysushi.github.io/MindCrafts-Website/images/prototypeimage.jpg') no-repeat center center/cover;
+    background: none;
+    background-image: url('https://grumpysushi.github.io/MindCrafts-Website/images/prototypeimage.jpg') no-repeat center center/cover;
     color: white;
     font-size: 40px;
     font-weight: bold;
