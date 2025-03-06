@@ -104,12 +104,13 @@ header {
 }
 
 .text-overlay {
-    background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark */
+    background: rgba(0, 0, 0, 0.2); /* Very light shadow effect */
     padding: 10px 20px;
-    border-radius: 10px;
-    backdrop-filter: blur(8px); /* Blurs the background */
-    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    border-radius: 20px; /* Softer corners */
+    backdrop-filter: blur(15px); /* More blur for a subtle effect */
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
     display: inline-block;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); /* Large, soft glow */
 }
 
 nav {
