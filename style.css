@@ -27,8 +27,6 @@ h1, .main-heading {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('https://grumpysushi.github.io/MindCrafts-Website/images/prototypeimage.jpg') no-repeat center;
-    background-size: cover; /* Ensures the image covers the full width */
     color: white;
     font-size: 40px;
     font-weight: bold;
