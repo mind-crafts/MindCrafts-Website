@@ -3,32 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video | MindCrafts</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS -->
+    <title>Videos | MindCrafts</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <header>
+
+    <!-- Logo (Click to go to Home) -->
+    <a href="index.html" class="logo">
+        <img src="images/mindcraft logo.png" height="60" width="60" alt="MindCrafts Logo">
+        <img src="images/mindcraft text.png" height="60" alt="MindCrafts Text">
+    </a>
+
+    <header>
     <h1 class="main-heading">
-        <span class="text-overlay">Vlogs</span>
+        <span class="text-overlay">Videos</span>
     </h1>
-        <p>Watch and Learn about our oldest to latest Vlogs!</p>
-        <nav>
+        <p>Watch and learn from our latest vlogs and tutorials!</p>
+        <nav class="navbar">
             <a href="index.html">Home</a> |
             <a href="about.html">About</a> |
             <a href="blog.html">Blogs n' Vlogs</a> |
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <div class="video-container">
-        <video controls>
-            <source src="your-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="video-caption">Your video description here</div>
-    </div>
+
+    <section class="video-section">
+        <div class="video-container">
+            <video controls>
+                <source src="videos/sample-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-caption">A sample video showcasing MindCrafts projects.</div>
+        </div>
+    </section>
 
     <footer>
-        <p>© 2025 MindCrafts. All rights reserved.</p>
+        <p>&copy; 2025 MindCrafts. All Rights Reserved.</p>
     </footer>
 
 </body>
