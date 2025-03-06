@@ -21,7 +21,7 @@ body {
 /* Headings */
 h1, .main-heading {
     width: 100%; /* Full width */
-    height: 200px; /* Increase height upwards */
+    height: 150px; /* Increase height upwards */
     display: flex;
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
@@ -36,7 +36,9 @@ h1, .main-heading {
     transition: all 0.3s ease-in-out;
     margin-top: 0; /* Remove any extra margin */
     padding-top: 0; /* Ensure no extra padding */
+	background-position: center top;
 }
+
 }
 
 h2 {
