@@ -58,10 +58,10 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 150px; /* Adjust this value to properly contain the text */
-    background-color: darkgreen;
-    padding: 0; /* Ensure no extra padding */
+    height: 150px;
+    padding: 0;
     margin: 0;
+    background: none !important; /* Remove background color */
 }
 
 .header-container h1 {
