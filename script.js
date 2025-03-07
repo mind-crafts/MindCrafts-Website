@@ -11,11 +11,12 @@ window.addEventListener("scroll", function() {
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".hamburger-menu");
     const sidebar = document.querySelector(".sidebar");
+    const overlay = document.querySelector("#overlay");
 
-    if (menuButton && sidebar) { // Ensure elements exist to avoid errors
-        menuButton.addEventListener("click", function () {
-            sidebar.classList.toggle("active");
-            menuButton.classList.toggle("active"); // Fix: Toggle active state on the button
-        });
+    function toggleMenu() {
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
     }
+
+    menuButton.addEventListener("click", toggleMenu);
 });
