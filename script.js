@@ -14,8 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const overlay = document.querySelector("#overlay");
 
     function toggleMenu() {
-        sidebar.classList.toggle("active");
-        overlay.classList.toggle("active");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        
+        sidebar.classList.toggle("active");  // Show/hide sidebar
+        overlay.classList.toggle("active");  // Show/hide overlay
     }
 
     menuButton.addEventListener("click", toggleMenu);
