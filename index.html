@@ -23,20 +23,29 @@
             top: 15px;
             right: 20px;
             cursor: pointer;
-            font-size: 24px;
-            z-index: 1000;
+            font-size: 28px;
+            z-index: 1100;
+            background: #333;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
         }
-        
+
+        /* Sidebar */
         .sidebar {
             position: fixed;
             top: 0;
-            right: -250px;
-            width: 250px;
+            right: -300px;
+            width: 300px;
             height: 100%;
-            background: #f9f9f9;
-            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-            transition: right 0.3s ease-in-out;
+            background: #fff;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+            transition: right 0.4s ease-in-out;
             padding: 20px;
+            z-index: 1200;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
         
         .sidebar.open {
@@ -45,15 +54,32 @@
 
         .sidebar a {
             display: block;
-            padding: 10px;
+            padding: 12px;
             color: #333;
             text-decoration: none;
             font-size: 18px;
             border-bottom: 1px solid #ddd;
+            width: 100%;
         }
         
         .sidebar a:hover {
             background: #e0e0e0;
+        }
+
+        /* Close button */
+        .close-btn {
+            align-self: flex-end;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+            margin-bottom: 20px;
+            background: none;
+            border: none;
+            padding: 5px 10px;
+        }
+
+        .close-btn:hover {
+            color: red;
         }
 
         /* Overlay Effect */
@@ -65,11 +91,13 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
             display: none;
+            z-index: 1100;
         }
 
         .overlay.show {
             display: block;
         }
+
     </style>
 </head>
 <body>
@@ -96,9 +124,9 @@
     <!-- Sidebar -->
     <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
     <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">&#10006;</button>
         <a href="contact.html">Contact</a>
         <a href="survey.html">Website Survey</a>
-        <a href="#" onclick="toggleMenu()">Close</a>
     </div>
 
     <footer>
