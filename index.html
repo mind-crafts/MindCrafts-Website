@@ -6,7 +6,18 @@
     <title>MindCrafts</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Hamburger menu styles */
+        /* Navbar shrink effect */
+        .navbar {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .shrink {
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Hamburger Menu */
         .menu-icon {
             position: fixed;
             top: 15px;
@@ -31,7 +42,7 @@
         .sidebar.open {
             right: 0;
         }
-        
+
         .sidebar a {
             display: block;
             padding: 10px;
@@ -43,6 +54,21 @@
         
         .sidebar a:hover {
             background: #e0e0e0;
+        }
+
+        /* Overlay Effect */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        .overlay.show {
+            display: block;
         }
     </style>
 </head>
@@ -63,13 +89,12 @@
             <a href="index.html">Home</a> |
             <a href="blog.html">Blogs n' Vlogs</a> |
             <a href="about.html">About</a> 
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         </nav>
     </header>
-    
-    <!-- Hamburger Menu -->
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-    
+
     <!-- Sidebar -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
     <div class="sidebar" id="sidebar">
         <a href="contact.html">Contact</a>
         <a href="survey.html">Website Survey</a>
@@ -81,9 +106,22 @@
     </footer>
     
     <script>
+        // Navbar shrink on scroll
+        window.addEventListener("scroll", function () {
+            let navbar = document.querySelector(".navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("shrink");
+            } else {
+                navbar.classList.remove("shrink");
+            }
+        });
+
+        // Hamburger menu toggle
         function toggleMenu() {
             var sidebar = document.getElementById('sidebar');
+            var overlay = document.getElementById('overlay');
             sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
         }
     </script>
     
