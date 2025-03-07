@@ -37,8 +37,6 @@ h1, .main-heading {
     transition: all 0.3s ease-in-out;
 }
 
-}
-
 h2 {
     margin-right: 100px;
     margin-left: 100px;
@@ -112,21 +110,38 @@ header {
     background: none;
     border: none;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 30px;
 }
 
 .hamburger-menu div {
-    width: 30px;
+    width: 35px;
     height: 4px;
     background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger-menu.active div:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-menu.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active div:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
 }
 
 /* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
-    right: -100px; /* Initially hidden */
+    right: -350px; /* Initially hidden */
     width: 250px;
     height: 100%;
     background: rgba(0, 128, 0, 0.9);
@@ -365,7 +380,6 @@ footer:hover {
     .hamburger-menu {
         display: block;
     }
-}
 
     h1, .main-heading {
         min-height: 150px;
