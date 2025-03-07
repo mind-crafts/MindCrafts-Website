@@ -23,8 +23,18 @@
             <a href="index.html">Home</a> |
             <a href="blog.html">Blogs n' Vlogs</a> |
             <a href="about.html">About</a> 
+            <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
         </nav>
     </header>
+
+    <!-- Sidebar -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">&#10006;</button>
+        <a href="contact.html">Contact</a>
+        <a href="survey.html">Website Survey</a>
+    </div>
+    
 <script src="footer.js"></script>
 </body>
 </html>
