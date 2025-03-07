@@ -203,7 +203,7 @@ nav {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Smooth shadow */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
     z-index: 1000;
 }
 
@@ -231,6 +231,7 @@ nav ul li a:hover {
 
 nav.shrink {
     padding: 10px 0;
+	background: rgba(0, 128, 0, 0.8);; /* Change this to match the original navbar */
 }
 
 nav.shrink a {
