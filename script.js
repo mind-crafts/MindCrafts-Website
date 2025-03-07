@@ -12,7 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".hamburger-menu");
     const sidebar = document.querySelector(".sidebar");
 
-    menuButton.addEventListener("click", function () {
-        sidebar.classList.toggle("active");
-    });
+    if (menuButton && sidebar) { // Ensure elements exist to avoid errors
+        menuButton.addEventListener("click", function () {
+            sidebar.classList.toggle("active");
+            menuButton.classList.toggle("active"); // Fix: Toggle active state on the button
+        });
+    }
 });
