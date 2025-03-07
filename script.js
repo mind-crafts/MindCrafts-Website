@@ -6,3 +6,13 @@ window.addEventListener("scroll", function() {
         navbar.classList.remove("shrink");
     }
 });
+
+// Hamburger Menu Functionality
+document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector(".hamburger-menu");
+    const sidebar = document.querySelector(".sidebar");
+
+    menuButton.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
+    });
+});
