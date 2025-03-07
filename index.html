@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindCrafts</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hamburger menu styles */
+        .menu-icon {
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1000;
+        }
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background: #f9f9f9;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            transition: right 0.3s ease-in-out;
+            padding: 20px;
+        }
+        
+        .sidebar.open {
+            right: 0;
+        }
+        
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .sidebar a:hover {
+            background: #e0e0e0;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,9 +55,9 @@
     </a>
 
     <header>
-    <h1 class="main-heading">
-        <span class="text-overlay">Welcome To MindCrafts!</span>
-    </h1>
+        <h1 class="main-heading">
+            <span class="text-overlay">Welcome To MindCrafts!</span>
+        </h1>
         <p>Turn your crafts into cash!</p>
         <nav class="navbar">
             <a href="index.html">Home</a> |
@@ -25,13 +65,27 @@
             <a href="about.html">About</a> 
         </nav>
     </header>
+    
+    <!-- Hamburger Menu -->
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="contact.html">Contact</a>
+        <a href="survey.html">Website Survey</a>
+        <a href="#" onclick="toggleMenu()">Close</a>
+    </div>
 
     <footer>
         <p>&copy; 2025 MindCrafts. All Rights Reserved.</p>
     </footer>
-
+    
+    <script>
+        function toggleMenu() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+    
 </body>
 </html>
-
-
-
