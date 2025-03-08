@@ -15,6 +15,8 @@
 	--grey: #AAA;
 	--white: #FFF;
 	--shadow: 8px 8px 30px rgba(0,0,0,.05);
+	--green-d-1: #1e7e34; /* Adjust this to your preferred green shade */
+	--green: #28a745; /* A common green shade */
 }
 
 .survey-page {
@@ -106,15 +108,15 @@ textarea {
 	font-weight: 500;
 }
 .btn-group .btn.submit {
-	background: var(--blue);
+	background: var(--green);
 	color: var(--white);
 }
 .btn-group .btn.submit:hover {
-	background: var(--blue-d-1);
+	background: var(--green-d-1);
 }
 .btn-group .btn.cancel {
 	background: var(--white);
-	color: var(--blue);
+	color: var(--green);
 }
 .btn-group .btn.cancel:hover {
 	background: var(--light);
