@@ -5,9 +5,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="survey-style.css">
+	<link rel="stylesheet" href="style.css">
 	<title>Form Reviews</title>
 </head>
 <body class="survey-page">
+
+  <!-- Logo (Click to go to Home) -->
+    <a href="index.html" class="logo">
+        <img src="images/mindcraft logo.png" height="60" width="60" alt="MindCrafts Logo">
+        <img src="images/mindcraft text.png" height="60" alt="MindCrafts Text">
+    </a>
+
+    <header>
+        <h1 class="main-heading">
+            <span class="text-overlay">Welcome To MindCrafts!</span>
+        </h1>
+        <p>Turn your crafts into cash!</p>
+        <nav class="navbar">
+            <a href="index.html">Home</a> |
+            <a href="blog.html">Blogs n' Vlogs</a> |
+            <a href="about.html">About</a> 
+            <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">&#10006;</button>
+        <a href="contact.html">Contact</a>
+        <a href="survey.html">Website Survey</a>
+    </div>
 
 	<div class="wrapper">
 		<h3>How would you rate our Website?</h3>
@@ -20,6 +48,7 @@
 				<i class='bx bx-star star' style="--i: 3;"></i>
 				<i class='bx bx-star star' style="--i: 4;"></i>
 			</div>
+
 			<textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
 			<div class="btn-group">
 				<button type="submit" class="btn submit">Submit</button>
@@ -27,7 +56,16 @@
 			</div>
 		</form>
 	</div>
-  
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<footer>
+        <p>&copy; 2025 MindCrafts. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
 	<script src="survey-script.js"></script>
 </body>
 </html>
