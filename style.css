@@ -317,6 +317,22 @@ video {
     max-width: 80%;
 }
 
+/* Poster Section */
+.poster-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.poster {
+    width: 80%; /* Adjust this based on how large you want the poster */
+    max-width: 600px; /* Ensures it doesn't get too big on larger screens */
+    height: auto;
+    border-radius: 10px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for better visibility */
+}
+
 /* Footer */
 footer {
     background-color: #333;
