@@ -27,14 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.addEventListener("click", toggleMenu);     // Click outside to close
 });
 
-function openPopup() {
-    document.getElementById("popup").style.display = "block";
-}
-
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
-
 // Cloudinary Upload Function
 async function uploadImage() {
     const fileInput = document.getElementById("imageInput");
@@ -47,7 +39,7 @@ async function uploadImage() {
 
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("upload_preset", "MindCrafts"); // Replace with your Cloudinary preset
+    formData.append("upload_preset", "mindcrafts_upload"); // Replace with your Cloudinary preset
     formData.append("cloud_name", "dqxpsa3ds"); // Replace with your Cloudinary cloud name
 
     try {
