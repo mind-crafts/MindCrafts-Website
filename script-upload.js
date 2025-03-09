@@ -74,3 +74,29 @@ function saveProjectData(imageUrl) {
         })
         .catch(error => console.error("Error updating JSON file:", error));
 }
+
+document.getElementById('uploadForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    let fileInput = document.getElementById('imageUpload').files[0];
+    let title = document.getElementById('title').value;
+    let description = document.getElementById('description').value;
+
+    // Upload to Cloudinary
+    let formData = new FormData();
+    formData.append("file", fileInput);
+    formData.append("upload_preset", "mindcrafts_upload"); // Replace with your Cloudinary upload preset
+
+    let response = await fetch("https://api.cloudinary.com/v1_1/dqxpsa3ds/image/upload", {
+        method: "POST",
+        body: formData
+    });
+
+    let data = await response.json();
+    let imageUrl = data.secure_url;
+
+    // Show uploaded image preview
+    document.getElementById("preview").innerHTML = `<img src="${imageUrl}" width="200">`;
+
+    console.log("Image uploaded:", imageUrl);
+});
