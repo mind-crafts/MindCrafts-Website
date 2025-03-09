@@ -41,3 +41,16 @@ function displayUploadedProject(project) {
         <p><b>Image URL:</b> <a href="${project.image}" target="_blank">${project.image}</a></p>
     `;
 }
+
+function loadProjects() {
+    // Retrieve the stored projects from localStorage
+    let projects = JSON.parse(localStorage.getItem("projects")) || [];
+
+    // Display all stored projects
+    projects.forEach(project => {
+        displayUploadedProject(project);
+    });
+}
+
+// Call this function when the page loads to display saved projects
+window.onload = loadProjects;
