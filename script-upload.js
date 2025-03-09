@@ -38,3 +38,39 @@ async function uploadImage() {
         alert("Upload failed. Please try again.");
     }
 }
+
+function saveProjectData(imageUrl) {
+    const title = document.getElementById("projectTitle").value;
+    const description = document.getElementById("projectDescription").value;
+    const videoEmbed = document.getElementById("videoEmbed").value;
+
+    if (!title || !description) {
+        alert("Please fill in all required fields!");
+        return;
+    }
+
+    const newProject = {
+        title: title,
+        description: description,
+        image: imageUrl,
+        video: videoEmbed
+    };
+
+    // Fetch existing projects and update the JSON file
+    fetch('projects.json')
+        .then(response => response.json())
+        .then(projects => {
+            projects.push(newProject);
+
+            // Save updated data (Requires a server-side script)
+            fetch('saveProjects.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(projects)
+            }).then(() => {
+                alert("Project uploaded successfully!");
+                location.reload();
+            });
+        })
+        .catch(error => console.error("Error updating JSON file:", error));
+}
