@@ -142,4 +142,4 @@ function displayUploadedProject(project) {
 }
 
     console.log("Image uploaded:", imageUrl);
-});
+);
