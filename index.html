@@ -52,9 +52,10 @@
 
 <script>
     fetch('projects.json')
-        .then(response => response.json())
-        .then(projects => {
+        window.onload = function() {
+            let projects = JSON.parse(localStorage.getItem("projects")) || [];
             const display = document.getElementById("projectsDisplay");
+            
             display.innerHTML = projects.map(project => `
                 <div class="project">
                     <h3>${project.title}</h3>
