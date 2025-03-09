@@ -11,47 +11,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
-    <script>
-        const firebaseConfig = {
-          apiKey: "AIzaSyCVOOg1G5_vliX79ykPGFECv2bImWTwbHg",
-          authDomain: "mindcrafts-35762.firebaseapp.com",
-          projectId: "mindcrafts-35762",
-          storageBucket: "mindcrafts-35762.firebasestorage.app",
-          messagingSenderId: "159042521260",
-          appId: "1:159042521260:web:51f929192559652b873709",
-          measurementId: "G-ZSRYBHPJ27"
-        };
-      
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
 
-        try {
-                const snapshot = await db.collection("projects").orderBy("timestamp", "desc").get();
-                if (snapshot.empty) {
-                    projectsDiv.innerHTML = "<p>No projects uploaded yet.</p>";
-                    return;
-                }
-          
-            const snapshot = await db.collection("projects").orderBy("timestamp", "desc").get();
-            snapshot.forEach(doc => {
-                const data = doc.data();
-                projectsDiv.innerHTML += `
-                    <div>
-                        <h3>${data.title}</h3>
-                        <img src="${data.imageUrl}" width="300px">
-                        <p>${data.description}</p>
-                        ${data.videoEmbed ? `<iframe width="300" src="${data.videoEmbed}" frameborder="0"></iframe>` : ""}
-                    </div>
-                    <hr>
-                `;
-            });
-        } catch (error) {
-            console.error("Error loading projects:", error);
-            projectsDiv.innerHTML = "<p>Failed to load projects. Please try again later.</p>";
-         }
-     }
-
-        loadProjects();
-    </script>
+    <script src="../script.js"></script>
 </body>
 </html>
