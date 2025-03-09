@@ -1,41 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contact-style.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Want to learn more?</h3>
+          <p class="text">
+            You can send us a message or visit our social media platforms. Together we can create a cleaner environment while expressing the creativity of our imagination!
+          </p>
 
-    <!-- Logo (Click to go to Home) -->
-    <a href="index.html" class="logo">
-        <img src="images/mindcraft logo.png" height="60" width="60" alt="MindCrafts Logo">
-        <img src="images/mindcraft text.png" height="60" alt="MindCrafts Text">
-    </a>
+          <div class="info">
+            <div class="information">
+              <img src="img/bx-map.svg" class="icon" alt="" />
+              <p>Gov. pack road. Baguio City. Ph</p>
+            </div>
+            <div class="information">
+              <img src="img/bxl-gmail.svg" class="icon" alt="" />
+              <p>MindCraft.stem@gmail.com</p>
+            </div>
+            <div class="information">
+              <img src="img/bxs-phone-call.svg" class="icon" alt="" />
+              <p>not available</p>
+            </div>
+          </div>
 
-    <header>
-    <h1 class="main-heading">
-        <span class="text-overlay">Contact Us!</span>
-    </h1>
-        <p>Need any help? We're here to guide you!</p>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="blog.html">Blogs n' Vlogs</a> |
-            <a href="about.html">About</a> 
-            <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
-        </nav>
-    </header>
+          <div class="social-media">
+            <p>Visit us on :</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/profile.php?id=61573915555302">
+                <img src="img/bxl-facebook-circle.svg" height="33" width="33" alt="facebook">
+              </a>
+              <a href="#">
+                <img src="img/bxl-instagram.svg" height="33" width="33" alt="instagram">
+              </a>
+              <a href="#">
+                <img src="img/bxl-twitter.svg" height="33" width="33" alt="twitter">
+              </a>
+            </div>
+          </div>
+        </div>
 
-    <!-- Sidebar -->
-    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
-    <div class="sidebar" id="sidebar">
-        <button class="close-btn" onclick="toggleMenu()">&#10006;</button>
-        <a href="contact.html">Contact</a>
-        <a href="survey.html">Website Survey</a>
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="https://formsubmit.co/Mindcraft.stem@gmail.com" method="POST" autocomplete="off">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" />
+              <label for="">Username</label>
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
     </div>
 
-<script src="footer.js"></script>
-<script src="script.js"></script>
-</body>
+    <script src="contact-script.js"></script>
+  </body>
 </html>
