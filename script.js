@@ -26,3 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
     closeButton.addEventListener("click", toggleMenu); // Close sidebar
     overlay.addEventListener("click", toggleMenu);     // Click outside to close
 });
+
+function openPopup() {
+    document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
