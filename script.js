@@ -51,7 +51,7 @@ async function uploadImage() {
     formData.append("cloud_name", "dqxpsa3ds"); // Replace with your Cloudinary cloud name
 
     try {
-        const response = await fetch("https://api.cloudinary.com/v1_1/YOUR_CLOUD_NAME/image/upload", {
+        const response = await fetch("https://api.cloudinary.com/v1_1/dqxpsa3ds/image/upload", {
             method: "POST",
             body: formData
         });
