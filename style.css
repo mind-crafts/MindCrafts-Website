@@ -120,6 +120,37 @@ header {
 	padding: 10px;
 }
 
+/* Information Section Styling */
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* Allows responsiveness */
+}
+
+.info-box {
+    flex: 1;
+    min-width: 300px; /* Ensures proper layout on smaller screens */
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.info-box h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.info-box p {
+    font-size: 1rem;
+    color: #666;
+}
+
 .hamburger-menu div {
     width: 35px;
     height: 4px;
