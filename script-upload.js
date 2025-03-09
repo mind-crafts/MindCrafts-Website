@@ -30,6 +30,9 @@ async function uploadImage() {
         uploadedImage.src = imageUrl;
         uploadedImage.style.display = "block";
 
+        // Show uploaded image preview
+        document.getElementById("preview").innerHTML = `<img src="${imageUrl}" width="200">`;
+
         console.log("Image uploaded successfully:", imageUrl);
         alert("Image uploaded successfully!");
 
@@ -137,9 +140,6 @@ function displayUploadedProject(project) {
         <p><b>Image URL:</b> <a href="${project.image}" target="_blank">${project.image}</a></p>
     `;
 }
-
-    // Show uploaded image preview
-    document.getElementById("preview").innerHTML = `<img src="${imageUrl}" width="200">`;
 
     console.log("Image uploaded:", imageUrl);
 });
