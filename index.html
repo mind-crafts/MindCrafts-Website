@@ -51,7 +51,6 @@
 <section id="projectsDisplay"></section>
 
 <script>
-    fetch('projects.json')
         window.onload = function() {
             let projects = JSON.parse(localStorage.getItem("projects")) || [];
             const display = document.getElementById("projectsDisplay");
