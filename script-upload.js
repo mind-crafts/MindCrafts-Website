@@ -82,18 +82,61 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
     let title = document.getElementById('title').value;
     let description = document.getElementById('description').value;
 
+    if (!fileInput || !title || !description) {
+        alert("Please fill in all fields before uploading!");
+        return;
+    }
+
     // Upload to Cloudinary
     let formData = new FormData();
     formData.append("file", fileInput);
-    formData.append("upload_preset", "mindcrafts_upload"); // Replace with your Cloudinary upload preset
+    formData.append("upload_preset", "mindcrafts_upload");
 
-    let response = await fetch("https://api.cloudinary.com/v1_1/dqxpsa3ds/image/upload", {
-        method: "POST",
-        body: formData
-    });
+    try {
+        let response = await fetch("https://api.cloudinary.com/v1_1/dqxpsa3ds/image/upload", {
+            method: "POST",
+            body: formData
+        });
 
-    let data = await response.json();
-    let imageUrl = data.secure_url;
+        let data = await response.json();
+        let imageUrl = data.secure_url; // Get the uploaded image URL
+
+        console.log("Image uploaded:", imageUrl);
+
+        // Create a project object
+        let project = {
+            title: title,
+            description: description,
+            image: imageUrl
+        };
+
+        saveProjectToLocalStorage(project); // Save project data
+        displayUploadedProject(project); // Display project on the webpage
+
+    } catch (error) {
+        console.error("Upload failed:", error);
+        alert("Upload failed. Please try again.");
+    }
+});
+
+// Function to store project data in localStorage (temporary storage)
+function saveProjectToLocalStorage(project) {
+    let projects = JSON.parse(localStorage.getItem("projects")) || [];
+    projects.push(project);
+    localStorage.setItem("projects", JSON.stringify(projects));
+}
+
+// Function to display the uploaded project on the page
+function displayUploadedProject(project) {
+    let responseContainer = document.getElementById("responseContainer");
+    responseContainer.innerHTML = `
+        <h3>Upload Successful!</h3>
+        <img src="${project.image}" width="300">
+        <h4>${project.title}</h4>
+        <p>${project.description}</p>
+        <p><b>Image URL:</b> <a href="${project.image}" target="_blank">${project.image}</a></p>
+    `;
+}
 
     // Show uploaded image preview
     document.getElementById("preview").innerHTML = `<img src="${imageUrl}" width="200">`;
