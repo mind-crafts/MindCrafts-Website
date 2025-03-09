@@ -61,6 +61,40 @@ async function uploadImage() {
         const data = await response.json();
         const imageUrl = data.secure_url;
 
+        // Display uploaded image
+        const uploadedImage = document.getElementById("uploadedImage");
+        uploadedImage.src = imageUrl;
+        uploadedImage.style.display = "block";
+
+        // Get project details
+        const title = document.getElementById("projectTitle").value.trim();
+        const description = document.getElementById("projectDescription").value.trim();
+        let videoEmbed = document.getElementById("videoEmbed").value.trim();
+
+        // Ensure the user provides at least a title and image
+        if (!title) {
+            alert("Please enter a title for your project.");
+            return;
+        }
+
+        // Convert YouTube link to embed format if necessary
+        if (videoEmbed.includes("youtube.com/watch?v=")) {
+            videoEmbed = videoEmbed.replace("watch?v=", "embed/");
+        }
+
+        // Store project details in Firebase Firestore
+        await db.collection("projects").add({
+            title,
+            description,
+            imageUrl,
+            videoEmbed,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        });
+
+        alert("Project uploaded successfully!");
+    } catch (error) {
+        console.error("Upload failed:", error);
+        alert("Upload failed. Please try again.");
     }
 }
 
