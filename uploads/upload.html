@@ -35,6 +35,16 @@
         <a href="../survey.html">Website Survey</a>
     </div>
 
+    <form id="uploadForm">
+    <input type="text" id="title" placeholder="Project Title" required>
+    <textarea id="description" placeholder="Project Description" required></textarea>
+    <input type="file" id="imageUpload" accept="image/*" required>
+    <button type="submit">Upload</button>
+</form>
+<div id="preview"></div>
+
+<script src="../script-upload.js"></script> <!-- Link to your script -->
+
     <section class="Upload-container">
         <div class="Upload-post">
             <h2>Upload Your Craft Project</h2>
