@@ -35,31 +35,26 @@
         <a href="../survey.html">Website Survey</a>
     </div>
 
-<div id="preview"></div>
-
-<script src="../script-upload.js"></script> <!-- Link to your script -->
-
     <section class="Upload-container">
         <div class="Upload-post">
             <h2>Upload Your Craft Project</h2>
-            <input type="file" id="imageInput" accept="image/*" required>
-            <input type="text" id="Title" placeholder="Enter project title">
-            <textarea id="Description" placeholder="Put your narrative here"></textarea>
+            <input type="file" id="imageInput">
+            <input type="text" id="projectTitle" placeholder="Enter project title">
+            <textarea id="projectDescription" placeholder="Describe your process"></textarea>
             <input type="text" id="videoEmbed" placeholder="Paste YouTube Embed Link (optional)">
             <button onclick="uploadImage()">Upload</button>
         </div>
-    </section>
     
-<img id="uploadedImage" style="display:none; width: 300px;">
+    <img id="uploadedImage" style="display:none; width: 300px;">
 
-<div id="popup" class="popup">
+        <div id="popup" class="popup">
     <div class="popup-content">
         <span class="close-btn" onclick="closePopup()">&times;</span>
         <iframe id="popup-iframe" src="contact.html"></iframe>
     </div>
 </div>
 
-<script src="../script.js"></script>
-<script src="../script-upload.js"></script>
+    <script src="../script.js"></script>
+        <script src="../script-upload.js"></script>
 </body>
 </html>
