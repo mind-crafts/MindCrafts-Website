@@ -98,6 +98,10 @@ async function uploadImage() {
     }
 }
 
+// Import Firebase modules (for Firebase v10+)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs, orderBy, query, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
  // Firebase Setup
         const firebaseConfig = {
             apiKey: "AIzaSyCVOOg1G5_vliX79ykPGFECv2bImWTwbHg",
