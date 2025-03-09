@@ -27,6 +27,16 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.addEventListener("click", toggleMenu);     // Click outside to close
 });
 
+function openPopup() {
+    let popup = document.getElementById("popup");
+    popup.style.display = "flex"; // Ensures proper flex centering
+}
+
+function closePopup() {
+    let popup = document.getElementById("popup");
+    popup.style.display = "none"; // Hides popup when closing
+}
+
 // Cloudinary Upload Function
 async function uploadImage() {
     const fileInput = document.getElementById("imageInput");
