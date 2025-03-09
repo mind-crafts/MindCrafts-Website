@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.querySelector(".sidebar");
     const overlay = document.querySelector("#overlay");
     const closeButton = document.querySelector(".close-btn");
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get("id");
 
     function toggleMenu() {
         const sidebar = document.getElementById("sidebar");
@@ -20,6 +22,23 @@ document.addEventListener("DOMContentLoaded", function () {
         
         sidebar.classList.toggle("active");  // Show/hide sidebar
         overlay.classList.toggle("active");  // Show/hide overlay
+    }
+
+    if (projectId) {
+        fetch("projects.json")
+            .then(response => response.json())
+            .then(data => {
+                const project = data.find(p => p.id === projectId);
+                if (project) {
+                    document.title = project.name;
+                    document.getElementById("project-name").textContent = project.name;
+                    document.getElementById("project-image").src = project.image;
+                    document.getElementById("project-description").innerHTML = project.description;
+                    document.getElementById("project-tutorial").innerHTML = project.tutorial;
+                    document.getElementById("project-video").src = project.video;
+                } else {
+                    document.querySelector("main").innerHTML = "<h1>Project Not Found</h1>";
+                }
     }
 
     menuButton.addEventListener("click", toggleMenu);  // Open sidebar
