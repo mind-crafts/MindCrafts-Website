@@ -190,3 +190,16 @@ async function loadProjects() {
 }
 
 loadProjects();
+
+function uploadImage() {
+    console.log("Upload button clicked!");
+
+    let fileInput = document.getElementById("imageInput").files[0];
+    if (!fileInput) {
+        alert("Please select an image!");
+        return;
+    }
+
+    console.log("File selected:", fileInput.name);
+}
+
