@@ -123,18 +123,19 @@ header {
 /* Information Section Styling */
 .info-container {
     display: flex;
-    justify-content: space-between; /* Ensures they spread out evenly */
-    align-items: stretch; /* Keeps them the same height */
-    gap: 20px; /* Adjust spacing */
+    justify-content: center; /* Centers content */
+    align-items: stretch; /* Keeps boxes the same height */
+    gap: 20px; /* Adds space between boxes */
     padding: 20px;
-    max-width: 700px; /* Increased width to prevent stacking */
-    margin: auto; /* Centers the container */
-    flex-wrap: nowrap; /* Ensures they stay in one row */
+    max-width: 1000px; /* Ensures enough space for both boxes */
+    margin: auto; /* Centers container */
+    flex-wrap: nowrap; /* Forces them to stay in a row */
 }
 
 /* Individual Box Styling */
 .info-box {
-    width: calc(50% - 10px); /* Ensures two equal boxes side by side */
+    flex: 1; /* Makes both boxes take equal space */
+    max-width: 400px; /* Prevents them from being too wide */
     padding: 20px;
     background: #f9f9f9;
     border-radius: 10px;
