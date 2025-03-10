@@ -79,3 +79,29 @@ async function uploadImage() {
         alert("Upload failed. Please try again.");
     }
 }
+
+// ✅ Function to display projects from localStorage
+function displayProjects() {
+    let projects = JSON.parse(localStorage.getItem("projects")) || [];
+    const display = document.getElementById("projectsDisplay");
+
+    if (!display) return; // Prevents errors if the element doesn't exist
+
+    if (projects.length === 0) {
+        display.innerHTML = "<p>No projects uploaded yet.</p>";
+        return;
+    }
+
+    // ✅ Display projects dynamically
+    display.innerHTML = projects.map(project => `
+        <div class="project-card">
+            <h3>${project.title}</h3>
+            <img src="${project.image}" width="300">
+            <p>${project.description}</p>
+            ${project.video ? `<iframe src="${project.video}" width="300" height="200"></iframe>` : ""}
+        </div>
+    `).join("");
+}
+
+// ✅ Call displayProjects() when page loads
+window.onload = displayProjects;
