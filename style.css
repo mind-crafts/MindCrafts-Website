@@ -123,18 +123,18 @@ header {
 /* Information Section Styling */
 .info-container {
     display: flex;
-    justify-content: center; /* Ensures horizontal alignment */
-    align-items: stretch; /* Keeps all boxes at the same height */
-    gap: 15px; /* Adds spacing between boxes */
+    justify-content: space-between; /* Ensures they spread out evenly */
+    align-items: stretch; /* Keeps them the same height */
+    gap: 20px; /* Adjust spacing */
     padding: 20px;
-    max-width: 600px; /* Slightly smaller for a compact look */
-    margin: auto; /* Centers it on the page */
+    max-width: 700px; /* Increased width to prevent stacking */
+    margin: auto; /* Centers the container */
+    flex-wrap: nowrap; /* Ensures they stay in one row */
 }
 
 /* Individual Box Styling */
 .info-box {
-    width: 45%; /* Makes sure they stay side by side */
-    min-width: 250px; /* Ensures they don’t shrink too much */
+    width: calc(50% - 10px); /* Ensures two equal boxes side by side */
     padding: 20px;
     background: #f9f9f9;
     border-radius: 10px;
@@ -456,7 +456,7 @@ footer:hover {
 }
 
 /* Mobile Responsive */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     nav ul {
         display: none;
     }
@@ -548,9 +548,10 @@ nav a {
 }
 
 .info-container {
-        flex-direction: column; /* Stacks them vertically on small screens */
+        flex-direction: column;
+        align-items: center;
     }
     .info-box {
-        width: 100%; /* Takes full width when stacked */
+        width: 100%;
     }
 }
