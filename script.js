@@ -1,43 +1,43 @@
 window.addEventListener("scroll", function() {
     let navbar = document.querySelector("nav");
-    if (window.scrollY > 50) { // Adjust threshold
+    if (window.scrollY > 50) { 
         navbar.classList.add("shrink");
     } else {
         navbar.classList.remove("shrink");
     }
 });
 
-// Hamburger Menu Functionality
+// ✅ Ensure Hamburger Menu Works
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".hamburger-menu");
-    const sidebar = document.querySelector(".sidebar");
-    const overlay = document.querySelector("#overlay");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
     const closeButton = document.querySelector(".close-btn");
 
     function toggleMenu() {
-        const sidebar = document.getElementById("sidebar");
-        const overlay = document.getElementById("overlay");
-        
-        sidebar.classList.toggle("active");  // Show/hide sidebar
-        overlay.classList.toggle("active");  // Show/hide overlay
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
     }
 
-    menuButton.addEventListener("click", toggleMenu);  // Open sidebar
-    closeButton.addEventListener("click", toggleMenu); // Close sidebar
-    overlay.addEventListener("click", toggleMenu);     // Click outside to close
+    if (menuButton && closeButton && overlay) {
+        menuButton.addEventListener("click", toggleMenu);
+        closeButton.addEventListener("click", toggleMenu);
+        overlay.addEventListener("click", toggleMenu);
+    }
+
+    // ✅ Call `displayProjects()` only after the DOM is loaded
+    displayProjects();
 });
 
 function openPopup() {
-    let popup = document.getElementById("popup");
-    popup.style.display = "flex"; // Ensures proper flex centering
+    document.getElementById("popup").style.display = "flex";
 }
 
 function closePopup() {
-    let popup = document.getElementById("popup");
-    popup.style.display = "none"; // Hides popup when closing
+    document.getElementById("popup").style.display = "none";
 }
 
-// 🎯 Load and Display Projects from localStorage
+// 🎯 Display Projects from localStorage
 function displayProjects() {
     let projects = JSON.parse(localStorage.getItem("projects")) || [];
     const display = document.getElementById("projectsDisplay");
@@ -55,6 +55,3 @@ function displayProjects() {
           `).join("")
         : "<p>No projects uploaded yet.</p>";
 }
-
-// ✅ Load projects when the page loads
-window.onload = displayProjects;
