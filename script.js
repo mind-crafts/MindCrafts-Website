@@ -36,22 +36,3 @@ function closePopup() {
     let popup = document.getElementById("popup");
     popup.style.display = "none"; // Hides popup when closing
 }
-
-// 🎯 Load and Display Projects from localStorage
-function displayProjects() {
-    let projects = JSON.parse(localStorage.getItem("projects")) || [];
-    const display = document.getElementById("projectsDisplay");
-
-    if (!display) return; // ✅ Prevent errors if element doesn't exist
-
-    display.innerHTML = projects.length > 0
-        ? projects.map(project => `
-            <div class="project-card">
-                <h3>${project.title}</h3>
-                <img src="${project.image}" width="300">
-                <p>${project.description}</p>
-                ${project.video ? <iframe src="${project.video}" width="300" height="200"></iframe> : ""}
-            </div>
-          `).join("")
-        : "<p>No projects uploaded yet.</p>";
-}
