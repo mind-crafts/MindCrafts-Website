@@ -123,31 +123,35 @@ header {
 /* Information Section Styling */
 .info-container {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    padding: 30px;
-    max-width: 600px;
-    margin: 5px;
-    flex-wrap: wrap; /* Allows responsiveness */
+    justify-content: center; /* Centers content */
+    align-items: center; /* Aligns vertically */
+    gap: 10px; /* Reduces excessive space */
+    padding: 20px;
+    max-width: 500px; /* Makes container smaller */
+    margin: auto; /* Centers it horizontally */
+    flex-wrap: wrap; /* Keeps responsiveness */
 }
 
+/* Individual Box Styling */
 .info-box {
     flex: 1;
-    min-width: 250px; /* Ensures proper layout on smaller screens */
-    padding: 20px;
+    min-width: 220px; /* Prevents shrinking too much */
+    max-width: 240px; /* Keeps a compact size */
+    padding: 15px;
     background: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+/* Headings and Paragraph Styling */
 .info-box h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem; /* Slightly smaller but still readable */
     color: #333;
 }
 
 .info-box p {
-    font-size: 1rem;
+    font-size: 0.95rem; /* Keeps text readable */
     color: #666;
 }
 
