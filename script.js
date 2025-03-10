@@ -36,3 +36,6 @@ function closePopup() {
     let popup = document.getElementById("popup");
     popup.style.display = "none"; // Hides popup when closing
 }
+
+window.onload = displayProjects;
+
