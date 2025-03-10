@@ -82,7 +82,7 @@ function displayProjects() {
     display.innerHTML = projects.map(project => `
         <div class="project-card">
             <h3>${project.title}</h3>
-            <img src="${project.image}" width="300">
+            <img src="${project.image}" width="300" alt="${project.title}">
             <p>${project.description}</p>
             ${project.video ? `<iframe src="${project.video}" width="300" height="200"></iframe>` : ""}
         </div>
