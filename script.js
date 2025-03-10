@@ -61,5 +61,3 @@ function displayHomepageProjects() {
 
 // ✅ Call this function when homepage loads
 window.onload = displayHomepageProjects;
-
-
