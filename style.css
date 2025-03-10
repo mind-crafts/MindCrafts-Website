@@ -449,17 +449,24 @@ footer:hover {
     }
 
     h1, .main-heading {
-        min-height: 150px;
-        font-size: 30px;
+        font-size: 28px; /* Smaller font size for mobile */
+        min-height: 100px; /* Reduce heading height */
+        padding: 15px;
     }
 
-    h2, h3 {
-        font-size: 18px;
-        margin: 10px auto;
+    h2 {
+        font-size: 24px;
+        margin: 40px 5%;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin: 30px 5%;
     }
 
     p, li {
-        font-size: 14px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     nav {
