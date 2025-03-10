@@ -680,3 +680,66 @@ nav a {
 .show-more-btn:hover {
     background-color: #005f73;
 }
+
+.AboutUs {
+    background: #333; /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.ProfilesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Spreads profiles to the edges */
+    gap: 15px; /* Reduces space between profiles */
+    max-width: 1200px; /* Allows wider layout */
+    margin: 5px;
+}
+
+.team-member {
+    background: #222;
+    width: 250px; /* Adjust width if needed */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the image */
+    justify-content: center; /* Ensures content stays vertically centered */
+}
+
+.team-member img {
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
+    object-fit: cover; /* Ensures image covers space properly */
+    margin-bottom: 0px; /* Adds spacing between image and text */
+}
+
+.team-member h2 {
+    width: 100%;
+    text-align: left;
+    margin: 5px 0; /* Reduces space above and below the heading */
+    padding-left: 10px;
+    font-size: 18px; /* Adjust font size if needed */
+}
+
+.team-member p {
+    width: 100%;
+    text-align: left;
+    margin: 5px 0; /* Reduces space between text and heading */
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .ProfilesContainer {
+        justify-content: center; /* Centers only on small screens */
+    }
+
+    .team-member {
+        width: 90%; /* Takes more space on small screens */
+    }
+}
