@@ -37,14 +37,16 @@ function closePopup() {
     popup.style.display = "none"; // Hides popup when closing
 }
 
-window.onload = function() {
+// 🎯 Load and Display Projects from localStorage
+function displayProjects() {
     let projects = JSON.parse(localStorage.getItem("projects")) || [];
     const display = document.getElementById("projectsDisplay");
 
-if (display) { // ✅ Only execute if the element exists
+    if (!display) return; // ✅ Prevent errors if element doesn't exist
+
     display.innerHTML = projects.length > 0
         ? projects.map(project => `
-            <div class="project">
+            <div class="project-card">
                 <h3>${project.title}</h3>
                 <img src="${project.image}" width="300">
                 <p>${project.description}</p>
@@ -53,4 +55,6 @@ if (display) { // ✅ Only execute if the element exists
           `).join("")
         : "<p>No projects uploaded yet.</p>";
 }
-    
+
+// ✅ Load projects when the page loads
+window.onload = displayProjects;
