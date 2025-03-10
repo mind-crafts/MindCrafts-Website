@@ -124,16 +124,16 @@ header {
 .info-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: auto;
+    gap: 15px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 5px;
     flex-wrap: wrap; /* Allows responsiveness */
 }
 
 .info-box {
     flex: 1;
-    min-width: 300px; /* Ensures proper layout on smaller screens */
+    min-width: 250px; /* Ensures proper layout on smaller screens */
     padding: 20px;
     background: #f9f9f9;
     border-radius: 10px;
