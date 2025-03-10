@@ -45,6 +45,13 @@ function uploadImage() {
     .then(data => {
         const imageUrl = data.secure_url; // Get the uploaded image URL
 
+        // ✅ Display uploaded image
+        const uploadedImage = document.getElementById("uploadedImage");
+        if (uploadedImage) {
+            uploadedImage.src = imageUrl;
+            uploadedImage.style.display = "block";
+        }
+
         // ✅ Save project details in localStorage
         let projects = JSON.parse(localStorage.getItem("projects")) || [];
         projects.push({ title, description, video, image: imageUrl });
@@ -53,44 +60,10 @@ function uploadImage() {
         alert("Project uploaded successfully!");
         displayProjects(); // ✅ Refresh the project display after upload
     })
-    .catch(error => console.error("Error uploading image:", error));
-}
-
-    try {
-        const response = await fetch("https://api.cloudinary.com/v1_1/dqxpsa3ds/image/upload", {
-            method: "POST",
-            body: formData
-        });
-
-        const data = await response.json();
-        if (!data.secure_url) {
-            throw new Error("Failed to get image URL from Cloudinary");
-        }
-
-        const imageUrl = data.secure_url;
-
-        // 🎯 Display uploaded image
-        const uploadedImage = document.getElementById("uploadedImage");
-        uploadedImage.src = imageUrl;
-        uploadedImage.style.display = "block";
-
-        // 🌟 Store project data in localStorage
-        let projects = JSON.parse(localStorage.getItem("projects")) || [];
-        projects.push({
-            title: title,
-            description: description,
-            image: imageUrl,
-            video: video
-        });
-
-        localStorage.setItem("projects", JSON.stringify(projects));
-
-        alert("Project uploaded successfully!");
-
-    } catch (error) {
+    .catch(error => {
         console.error("Upload failed:", error);
         alert("Upload failed. Please try again.");
-    }
+    });
 }
 
 // ✅ Function to display projects from localStorage
