@@ -368,37 +368,35 @@ video {
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6); /* Optional: subtle shadow */
 }
 
+/* Upload Section Styling */
 .upload-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows elements to stack on smaller screens */
-    align-items: center; /* Aligns items properly */
-    justify-content: center;
-    gap: 20px; /* Spacing between elements */
-    background-color: #f0f0f0;
+    display: flex; /* Puts image and text side by side */
+    align-items: center; /* Centers them vertically */
+    background-color: #f0f0f0; /* Light grey background */
     padding: 20px;
-    border-radius: 10px;
-    max-width: 800px; /* Prevents it from being too wide */
+    border-radius: 10px; /* Optional: Rounds corners */
+    max-width: 800px; /* Adjust based on your layout */
     margin: auto;
+    gap: 20px;
 }
 
-/* Upload Form */
-.upload-form {
-    flex: 1; /* Takes up equal space */
-    min-width: 300px;
+.Upload-post {
+    background-color: #f8f8f8; /* Light background for contrast */
     padding: 20px;
-    background: white;
     border-radius: 10px;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
-.upload-form h2 {
+.Upload-post h2 {
     margin-bottom: 15px;
     font-size: 22px;
 }
 
-.upload-form input[type="file"],
-.upload-form input[type="text"],
-.upload-form textarea {
+.Upload-post input[type="file"],
+.Upload-post input[type="text"],
+.Upload-post textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -408,12 +406,12 @@ video {
     box-sizing: border-box;
 }
 
-.upload-form textarea {
-    height: 120px;
+.Upload-post textarea {
+    height: 120px; /* Bigger textarea for better readability */
     resize: vertical;
 }
 
-.upload-form button {
+.Upload-post button {
     width: 100%;
     background-color: #4CAF50;
     color: white;
@@ -425,25 +423,24 @@ video {
     transition: background 0.3s;
 }
 
-.upload-form button:hover {
+.Upload-post button:hover {
     background-color: #45a049;
 }
 
-/* Preview Section */
-.upload-preview {
-    flex: 1; /* Takes equal space */
-    min-width: 300px;
-    text-align: center;
-    background: white;
+.upload-image {
+    width: 60%; /* Adjust as needed */
+    max-width: 300px; /* Ensures image isn't too large */
+	background: #fff; /* White background like blog containers */
     padding: 20px;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 10px; /* Optional */
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.upload-preview img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
+.upload-text {
+    width: 60%; /* Takes the remaining space */
+    padding: 20px;
+    background: #fff; /* White background like blog containers */
     border-radius: 10px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
 }
