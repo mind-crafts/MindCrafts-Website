@@ -480,10 +480,11 @@ footer:hover {
 }
 
 .logo{
-	position: fixed;
-	top: 10px;
+	position: absolute;
+	top: 50%;
 	left: 20px;
 	z-index: 1100;
+	transform: translateY(-50%);
 }
 
 nav a {
