@@ -23,6 +23,7 @@ function closePopup() {
 
 // 🌟 Upload Image to Cloudinary
 function uploadImage() {
+    if (event) event.preventDefault(); // Prevents redirection
     const title = document.getElementById("projectTitle").value;
     const description = document.getElementById("projectDescription").value;
     const video = document.getElementById("videoEmbed").value;
