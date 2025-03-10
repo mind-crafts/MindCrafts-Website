@@ -84,11 +84,13 @@ function displayProjects() {
 
     // ✅ Display projects dynamically
     projectSection.innerHTML = displayProjects.map(project => `
-        <div class="project-card">
-            <h3>${project.title}</h3>
-            ${project.image ? `<img src="${project.image}" width="300" alt="${project.title}">` : ""}
-            <p>${project.description}</p>
-            ${project.video ? `<iframe src="${project.video}" width="300" height="200"></iframe>` : ""}
+        <div class="project" onclick="window.open('${project.image}', '_blank')">
+            ${project.image ? `<img src="${project.image}" alt="${project.title}">` : ""}
+            <div>
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                ${project.video ? `<iframe src="${project.video}" width="300" height="200"></iframe>` : ""}
+            </div>
         </div>
     `).join("");
 }
