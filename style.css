@@ -123,21 +123,19 @@ header {
 /* Information Section Styling */
 .info-container {
     display: flex;
-    justify-content: center; /* Centers content */
-    align-items: center; /* Aligns vertically */
-    gap: 10px; /* Reduces excessive space */
+    justify-content: center; /* Ensures horizontal alignment */
+    align-items: stretch; /* Keeps all boxes at the same height */
+    gap: 15px; /* Adds spacing between boxes */
     padding: 20px;
-    max-width: 500px; /* Makes container smaller */
-    margin: auto; /* Centers it horizontally */
-    flex-wrap: wrap; /* Keeps responsiveness */
+    max-width: 600px; /* Slightly smaller for a compact look */
+    margin: auto; /* Centers it on the page */
 }
 
 /* Individual Box Styling */
 .info-box {
-    flex: 1;
-    min-width: 220px; /* Prevents shrinking too much */
-    max-width: 240px; /* Keeps a compact size */
-    padding: 15px;
+    width: 45%; /* Makes sure they stay side by side */
+    min-width: 250px; /* Ensures they don’t shrink too much */
+    padding: 20px;
     background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -146,12 +144,12 @@ header {
 
 /* Headings and Paragraph Styling */
 .info-box h2 {
-    font-size: 1.4rem; /* Slightly smaller but still readable */
+    font-size: 1.4rem; /* Keeps a good heading size */
     color: #333;
 }
 
 .info-box p {
-    font-size: 0.95rem; /* Keeps text readable */
+    font-size: 1rem; /* Maintains readability */
     color: #666;
 }
 
@@ -547,4 +545,12 @@ nav a {
 	color: white;
 	background: none;
 	font-size: 18px;
+}
+
+.info-container {
+        flex-direction: column; /* Stacks them vertically on small screens */
+    }
+    .info-box {
+        width: 100%; /* Takes full width when stacked */
+    }
 }
