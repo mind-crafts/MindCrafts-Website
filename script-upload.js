@@ -68,23 +68,25 @@ function uploadImage() {
     });
 }
 
-// ✅ Function to display projects from localStorage
 function displayProjects() {
     let projects = JSON.parse(localStorage.getItem("projects")) || [];
-    const display = document.getElementById("projectsDisplay");
+    const projectSection = document.getElementById("projectsDisplay") || document.getElementById("homepageProjectsDisplay");
 
-    if (!display) return; // Prevents errors if the element doesn't exist
+    if (!projectSection) return; // Prevents errors if the element doesn't exist
 
     if (projects.length === 0) {
-        display.innerHTML = "<p>No projects uploaded yet.</p>";
+        projectSection.innerHTML = "<p>No projects uploaded yet.</p>";
         return;
     }
 
+    // ✅ If on homepage, show only the latest 3 projects
+    const displayProjects = projectSection.id === "homepageProjectsDisplay" ? projects.slice(-3).reverse() : projects;
+
     // ✅ Display projects dynamically
-    display.innerHTML = projects.map(project => `
+    projectSection.innerHTML = displayProjects.map(project => `
         <div class="project-card">
             <h3>${project.title}</h3>
-            <img src="${project.image}" width="300" alt="${project.title}">
+            ${project.image ? `<img src="${project.image}" width="300" alt="${project.title}">` : ""}
             <p>${project.description}</p>
             ${project.video ? `<iframe src="${project.video}" width="300" height="200"></iframe>` : ""}
         </div>
