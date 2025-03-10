@@ -41,12 +41,16 @@ window.onload = function() {
     let projects = JSON.parse(localStorage.getItem("projects")) || [];
     const display = document.getElementById("projectsDisplay");
 
-    display.innerHTML = projects.map(project => `
-        <div class="project">
-            <h3>${project.title}</h3>
-            <img src="${project.image}" width="300">
-            <p>${project.description}</p>
-            ${project.video ? `<iframe src="${project.video}" width="300" height="200"></iframe>` : ""}
-        </div>
-    `).join("");
-};
+if (display) { // ✅ Only execute if the element exists
+    display.innerHTML = projects.length > 0
+        ? projects.map(project => `
+            <div class="project">
+                <h3>${project.title}</h3>
+                <img src="${project.image}" width="300">
+                <p>${project.description}</p>
+                ${project.video ? `<iframe src="${project.video}" width="300" height="200"></iframe>` : ""}
+            </div>
+          `).join("")
+        : "<p>No projects uploaded yet.</p>";
+}
+    
