@@ -25,6 +25,9 @@ function closePopup() {
 async function uploadImage() {
     const fileInput = document.getElementById("imageInput");
     const file = fileInput.files[0];
+    const title = document.getElementById("projectTitle").value.trim();
+    const description = document.getElementById("projectDescription").value.trim();
+    const video = document.getElementById("videoEmbed").value.trim();
 
     if (!file) {
         alert("Please select an image!");
@@ -53,11 +56,28 @@ async function uploadImage() {
         uploadedImage.src = imageUrl;
         uploadedImage.style.display = "block";
 
-        console.log("Image uploaded successfully:", imageUrl);
-        alert("Image uploaded successfully!");
+        // ✅ Save Project Data
+        saveProjectToLocalStorage(title, description, imageUrl, video);
+
+        alert("Project uploaded successfully!");
 
     } catch (error) {
         console.error("Upload failed:", error);
         alert("Upload failed. Please try again.");
     }
+}
+
+// 💾 Function to Save Data in LocalStorage
+function saveProjectToLocalStorage(title, description, imageUrl, video) {
+    let projects = JSON.parse(localStorage.getItem("projects")) || [];
+
+    let project = {
+        title: title,
+        description: description,
+        image: imageUrl,
+        video: video
+    };
+
+    projects.push(project);
+    localStorage.setItem("projects", JSON.stringify(projects));
 }
