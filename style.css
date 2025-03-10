@@ -137,7 +137,7 @@ header {
     flex: 1; /* Makes both boxes take equal space */
     max-width: 400px; /* Prevents them from being too wide */
     padding: 20px;
-    background: #008080;
+    background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
