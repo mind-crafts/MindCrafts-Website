@@ -465,10 +465,15 @@ footer:hover {
 }
 
 /* Mobile Responsive */
-@media screen and (max-width: 1024px) {
-    nav ul {
-        display: none;
+@media screen and (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+        align-items: center;
     }
+
+	.info-box {
+            width: 100%;
+	}
     .hamburger-menu {
         display: block;
     }
@@ -479,12 +484,11 @@ footer:hover {
     }
 
     h2, h3 {
-        font-size: 18px;
-        margin: 10px auto;
+        font-size: 16px;
     }
 
     p, li {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     nav {
