@@ -37,5 +37,29 @@ function closePopup() {
     popup.style.display = "none"; // Hides popup when closing
 }
 
-window.onload = displayProjects;
+function displayHomepageProjects() {
+    let projects = JSON.parse(localStorage.getItem("projects")) || [];
+    const display = document.getElementById("homepageProjectsDisplay");
+
+    if (!display) return; // Prevents errors if the element doesn't exist
+
+    if (projects.length === 0) {
+        display.innerHTML = "<p>No projects uploaded yet.</p>";
+        return;
+    }
+
+    // Show only the **latest** 3 projects
+    display.innerHTML = projects.slice(-3).reverse().map(project => `
+        <div class="project-card">
+            <h3>${project.title}</h3>
+            <img src="${project.image}" width="250" alt="${project.title}">
+            <p>${project.description}</p>
+            ${project.video ? `<iframe src="${project.video}" width="250" height="150"></iframe>` : ""}
+        </div>
+    `).join("");
+}
+
+// ✅ Call this function when homepage loads
+window.onload = displayHomepageProjects;
+
 
