@@ -480,15 +480,15 @@ footer:hover {
 
     h1, .main-heading {
         min-height: 150px;
-        font-size: 30px;
+        font-size: 38px;
     }
 
     h2, h3 {
-        font-size: 16px;
+        font-size: 32px;
     }
 
     p, li {
-        font-size: 12px;
+        font-size: 24px;
     }
 
     nav {
