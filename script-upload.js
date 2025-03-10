@@ -31,7 +31,7 @@ function uploadImage() {
 
     if (!title || !description || !imageInput.files.length) {
         alert("Please fill in all required fields.");
-        window.location.href = "projects.html"; // Redirect to the projects page
+    
         return;
     }
 
