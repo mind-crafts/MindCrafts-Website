@@ -9,8 +9,7 @@ body {
     margin: 0;
     padding-bottom: 60px;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    display: block;
     padding-left: 5%;
     padding-right: 5%;
     border-top-left-radius: 20px;
@@ -111,7 +110,7 @@ header {
     background: none;
     border: none;
     cursor: pointer;
-    display: inline-block;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 35px;
@@ -124,7 +123,7 @@ header {
 .info-container {
     display: flex;
     justify-content: center; /* Centers content */
-    flex-direction: row;
+    flex-direction: flex;
     align-items: stretch; /* Keeps boxes the same height */
     gap: 20px; /* Adds space between boxes */
     padding: 20px;
@@ -301,7 +300,7 @@ nav ul li a:hover {
 
 nav.shrink {
     padding: 10px 0;
-	background: rgba(0, 128, 0, 0.8);; /* Change this to match the original navbar */
+	background: rgba(0, 128, 0, 0.8);/* Change this to match the original navbar */
 }
 
 nav.shrink a {
