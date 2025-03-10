@@ -26,7 +26,7 @@
         </nav>
     </header>
 
-     <!-- Sidebar -->
+    <!-- Sidebar -->
     <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
     <div class="sidebar" id="sidebar">
         <button class="close-btn" onclick="toggleMenu()">✖</button>
@@ -34,39 +34,41 @@
         <a href="../survey.html">Website Survey</a>
     </div>
 
-   <section class="Upload-container">
-       <img src="your-image.jpg" alt="Upload Preview" class="upload-image">
-        <div class="Upload-post">
-            <h2>Upload Your Crafts</h2>
-            <p>Share your upcycled creation with the community. Add a title, description, and an image to showcase your work!</p>
-            <input type="file" id="imageInput">
-            <input type="text" id="projectTitle" placeholder="Enter project title">
-            <textarea id="projectDescription" placeholder="Describe your process"></textarea>
-            <input type="text" id="videoEmbed" placeholder="Paste YouTube Embed Link (optional)">
-            
-            <button onclick="uploadImage(event)">Upload</button>
-        </div>
+    <div class="upload-projects-container">
+        <section class="Upload-container">
+            <img src="your-image.jpg" alt="Upload Preview" class="upload-image">
+            <div class="Upload-post">
+                <h2>Upload Your Crafts</h2>
+                <p>Share your upcycled creation with the community. Add a title, description, and an image to showcase your work!</p>
+                <input type="file" id="imageInput">
+                <input type="text" id="projectTitle" placeholder="Enter project title">
+                <textarea id="projectDescription" placeholder="Describe your process"></textarea>
+                <input type="text" id="videoEmbed" placeholder="Paste YouTube Embed Link (optional)">
+                
+                <button onclick="uploadImage(event)">Upload</button>
+            </div>
+
+            <img id="uploadedImage" style="display:none;">
+        </section>
 
         <img id="uploadedImage" style="display:none;">
-    </section>
+    </div>
 
-    <img id="uploadedImage" style="display:none;">
-    </section>
-
-    <!-- Display Uploaded Projects -->
-    <section class="project-display">
-        <h2>Uploaded Projects</h2>
-        <div id="projectsDisplay">
-            <p>No projects uploaded yet.</p>
-        </div>
-    </section>
+    <div class="uploaded-projects-container">
+        <!-- Display Uploaded Projects -->
+        <section class="project-display">
+            <h2>Uploaded Projects</h2>
+            <div id="projectsDisplay">
+                <p>No projects uploaded yet.</p>
+            </div>
+        </section>
+    </div>
 
     <!-- Popup for Contact -->
     <div id="popup" class="popup">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup()">✖</span>
-            <h2>Contact Us</h2>
-            <p>If you have any questions, reach out to us!</p>
+            <iframe id="popup-iframe" src="../contact.html"></iframe>
         </div>
     </div>
 
