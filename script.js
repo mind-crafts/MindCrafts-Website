@@ -9,6 +9,8 @@ window.addEventListener("scroll", function() {
 
 // Hamburger Menu Functionality
 document.addEventListener("DOMContentLoaded", function () {
+    displayProjects(); // ✅ This ensures projects load properly
+    
     const menuButton = document.querySelector(".hamburger-menu");
     const sidebar = document.querySelector(".sidebar");
     const overlay = document.querySelector("#overlay");
