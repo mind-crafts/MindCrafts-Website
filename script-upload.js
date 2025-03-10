@@ -34,6 +34,11 @@ async function uploadImage() {
         return;
     }
 
+    if (!title || !description) {
+        alert("Title and Description are required!");
+        return;
+    }
+
     const formData = new FormData();
     formData.append("file", file);
     formData.append("upload_preset", "mindcrafts_upload"); // Replace with your actual preset
@@ -56,8 +61,16 @@ async function uploadImage() {
         uploadedImage.src = imageUrl;
         uploadedImage.style.display = "block";
 
-        // ✅ Save Project Data
-        saveProjectToLocalStorage(title, description, imageUrl, video);
+        // 🌟 Store project data in localStorage
+        let projects = JSON.parse(localStorage.getItem("projects")) || [];
+        projects.push({
+            title: title,
+            description: description,
+            image: imageUrl,
+            video: video
+        });
+
+        localStorage.setItem("projects", JSON.stringify(projects));
 
         alert("Project uploaded successfully!");
 
@@ -65,19 +78,4 @@ async function uploadImage() {
         console.error("Upload failed:", error);
         alert("Upload failed. Please try again.");
     }
-}
-
-// 💾 Function to Save Data in LocalStorage
-function saveProjectToLocalStorage(title, description, imageUrl, video) {
-    let projects = JSON.parse(localStorage.getItem("projects")) || [];
-
-    let project = {
-        title: title,
-        description: description,
-        image: imageUrl,
-        video: video
-    };
-
-    projects.push(project);
-    localStorage.setItem("projects", JSON.stringify(projects));
 }
