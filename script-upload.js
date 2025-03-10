@@ -22,26 +22,39 @@ function closePopup() {
 }
 
 // 🌟 Upload Image to Cloudinary
-async function uploadImage() {
-    const fileInput = document.getElementById("imageInput");
-    const file = fileInput.files[0];
-    const title = document.getElementById("projectTitle").value.trim();
-    const description = document.getElementById("projectDescription").value.trim();
-    const video = document.getElementById("videoEmbed").value.trim();
+function uploadImage() {
+    const title = document.getElementById("projectTitle").value;
+    const description = document.getElementById("projectDescription").value;
+    const video = document.getElementById("videoEmbed").value;
+    const imageInput = document.getElementById("imageInput");
 
-    if (!file) {
-        alert("Please select an image!");
-        return;
-    }
-
-    if (!title || !description) {
-        alert("Title and Description are required!");
+    if (!title || !description || !imageInput.files.length) {
+        alert("Please fill in all required fields.");
         return;
     }
 
     const formData = new FormData();
-    formData.append("file", file);
-    formData.append("upload_preset", "mindcrafts_upload"); // Replace with your actual preset
+    formData.append("file", imageInput.files[0]);
+    formData.append("upload_preset", "mindcrafts_upload"); // Replace with your Cloudinary preset
+
+    fetch("https://api.cloudinary.com/v1_1/dqxpsa3ds/image/upload", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        const imageUrl = data.secure_url; // Get the uploaded image URL
+
+        // ✅ Save project details in localStorage
+        let projects = JSON.parse(localStorage.getItem("projects")) || [];
+        projects.push({ title, description, video, image: imageUrl });
+        localStorage.setItem("projects", JSON.stringify(projects));
+
+        alert("Project uploaded successfully!");
+        displayProjects(); // ✅ Refresh the project display after upload
+    })
+    .catch(error => console.error("Error uploading image:", error));
+}
 
     try {
         const response = await fetch("https://api.cloudinary.com/v1_1/dqxpsa3ds/image/upload", {
