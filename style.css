@@ -124,12 +124,13 @@ header {
 .info-container {
     display: flex;
     justify-content: center; /* Centers content */
+    flex-direction: row;
     align-items: stretch; /* Keeps boxes the same height */
     gap: 20px; /* Adds space between boxes */
     padding: 20px;
-    max-width: 1000px; /* Ensures enough space for both boxes */
+    max-width: 900px; /* Ensures enough space for both boxes */
     margin: auto; /* Centers container */
-    flex-wrap: nowrap; /* Forces them to stay in a row */
+    flex-wrap: wrap; /* Forces them to stay in a row */
 }
 
 /* Individual Box Styling */
