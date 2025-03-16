@@ -28,15 +28,14 @@
 	padding: 1rem;
 }
 
-
-
-
-
+section{
+	flex: coloum;
+}
 
 .wrapper {
 	background: var(--white);
 	padding: 2rem;
-	max-width: 576px;
+	max-width: 600px;
 	width: 100%;
 	border-radius: .75rem;
 	box-shadow: var(--shadow);
@@ -50,11 +49,35 @@
 .rating {
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	grid-gap: .5rem;
+	gap: 0; /* Remove any additional gap */
 	font-size: 2rem;
 	color: var(--yellow);
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
+}
+.star-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: auto; /* Prevents div from expanding */
+	padding: 0;
+	margin: 0;
+	flex-shrink: 1; /* Prevents unnecessary expansion */
+	max-width: 80px; /* Adjust to fit your layout */
+}
+.star-box p {
+	font-size: 12px; /* Controls text size */
+	max-width: 60px; /* Limits the text width */
+	text-align: center;
+	font-weight: bold; /* Makes the text bold */
+}
+.rating div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 0;
+	margin: 0; /* Controls spacing between stars */
 }
 .rating .star {
 	cursor: pointer;
@@ -120,4 +143,22 @@ textarea {
 }
 .btn-group .btn.cancel:hover {
 	background: var(--light);
+}
+.survey-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    gap: 20px; /* Space between elements */
+    width: 80%; /* Prevents stretching */
+    margin: 20px auto; /* Center the section */
+}
+
+.rating .star-box {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: center !important;
+	text-align: center !important;
+	width: auto !important;
+	padding: 0 !important;
+	margin: 0 !important;
 }
