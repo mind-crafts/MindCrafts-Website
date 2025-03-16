@@ -10,6 +10,7 @@
 </head>
 <body class="survey-page">
 
+<section class="survey-container">
   <!-- Logo (Click to go to Home) -->
     <a href="index.html" class="logo">
         <img src="images/mindcraft logo.png" height="60" width="60" alt="MindCrafts Logo">
@@ -29,38 +30,55 @@
         </nav>
     </header>
 
-   <!-- Sidebar -->
-    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
-    <div class="sidebar" id="sidebar">
-        <button class="close-btn" onclick="toggleMenu()">&#10006;</button>
-        <button class="open-popup" onclick="openPopup()"><b>Contact</b></button>
-        <a href="survey.html">Website Survey</a>
-        <a href="uploads/upload.html" class="upload-btn">Upload Your Project</a> <!-- Adjusted path -->
-    </div>
+	
+	   <!-- Sidebar -->
+		<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+		<div class="sidebar" id="sidebar">
+			<button class="close-btn" onclick="toggleMenu()">&#10006;</button>
+			<button class="open-popup" onclick="openPopup()"><b>Contact</b></button>
+			<a href="survey.html">Website Survey</a>
+			<a href="uploads/upload.html" class="upload-btn">Upload Your Project</a> <!-- Adjusted path -->
+		</div>
 
-	<div class="wrapper">
-		<h3>How would you rate our Website?</h3>
-		<form action="https://formsubmit.co/Mindcraft.stem@gmail.com" method="POST">
-			<div class="rating">
-				<input type="number" name="rated" name="rating" hidden>
+		<div class="wrapper">
+			<h3>How would you rate our Website?</h3>
+			<form action="https://formsubmit.co/Mindcraft.stem@gmail.com" method="POST">
+		<div class="rating">
+			<input type="number" name="rated" hidden>
+			<div class="star-box">
 				<i class='bx bx-star star' style="--i: 0;"></i>
+				<p>Needs Improvement</p>
+			</div>
+			<div class="star-box">
 				<i class='bx bx-star star' style="--i: 1;"></i>
+				<p>Okay</p>
+			</div>
+			<div class="star-box">
 				<i class='bx bx-star star' style="--i: 2;"></i>
+				<p>Good</p>
+			</div>
+			<div class="star-box">
 				<i class='bx bx-star star' style="--i: 3;"></i>
+				<p>Great</p>
+			</div>
+			<div class="star-box">
 				<i class='bx bx-star star' style="--i: 4;"></i>
+				<p>Perfect</p>
 			</div>
+		</div>
 
-			<textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
-			<div class="btn-group">
-				<button type="submit" class="btn submit">Submit</button>
-				<button class="btn cancel">Cancel</button>
-			</div>
-		</form>
-	</div>
-	<br>
-	<br>
-	<br>
-	<br>
+				<textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+				<div class="btn-group">
+					<button type="submit" class="btn submit">Submit</button>
+					<button class="btn cancel">Cancel</button>
+				</div>
+			</form>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+</section>
 	
 	<footer>
         <p>&copy; 2025 MindCrafts. All Rights Reserved.</p>
