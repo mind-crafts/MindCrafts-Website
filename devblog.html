@@ -43,6 +43,33 @@
         .blog-content {
             font-size: 16px;
         }
+
+        /* New Navbar Styling */
+        .secondary-navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            top: 69px; /* Adjusted top */
+            background-color: rgba(0, 128, 0, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            width: 25%;
+            margin-left: auto;
+            margin-right: auto;
+            position: fixed;
+            transform: translateX(-50%);
+        }
+
+        /* Arrow Styling */
+        .arrow-left {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid white;
+            margin-left: 150px;
+        }
     </style>
 </head>
 <body>
@@ -60,7 +87,7 @@
         <p>Read and Learn about our oldest to latest Blogs!</p>
         <nav>
             <a href="index.html">Home</a> |
-            <a href="blog.html">Blogs n' Vlogs</a> |
+            <a href="devblog.html">Blogs n' Vlogs</a> |
             <a href="about.html">About</a> 
             <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
         </nav>
@@ -70,10 +97,37 @@
     <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
     <div class="sidebar" id="sidebar">
         <button class="close-btn" onclick="toggleMenu()">&#10006;</button>
-        <button class="open-popup" onclick="openPopup()"><b>Contact</b></button>
+        <button class="open-popup" onclick="openPopup('popup-contact')"><b>Contact</b></button>
         <a href="survey.html">Website Survey</a>
-        <a href="uploads/upload.html" class="upload-btn">Upload Your Project</a> <!-- Adjusted path -->
+        <button class="open-popup" onclick="openPopup('popup-upload')"><b>Upload Your Project</b></button>
     </div>
+
+    <footer>
+        <p>&copy; 2025 MindCrafts. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Contact Popup -->
+	<div id="popup-contact" class="popup">
+		<div class="popup-content">
+			<span class="close-btn" onclick="closePopup('popup-contact')">&times;</span>
+			<iframe id="popup-iframe-contact" src="contact.html"></iframe>
+		</div>
+	</div>
+
+	<!-- Upload Popup -->
+	<div id="popup-upload" class="popup">
+		<div class="popup-content">
+			<span class="close-btn" onclick="closePopup('popup-upload')">&times;</span>
+			<iframe id="popup-iframe-upload" src="upload.html"></iframe>
+		</div>
+	</div>
+
+    <!-- New Navbar -->
+    <nav class="secondary-navbar">
+        <a href="devblog.html">Blogs</a> |
+        <a href="video.html">Videos</a>
+        <div class="arrow-left"></div>
+    </nav>
     
     <!-- Blog Content -->
     <section class="blog-container">
@@ -82,13 +136,10 @@
 
             <p>Hello and welcome to MindCrafts! As students, we have the power to make a real difference in our environment. Instead of letting waste pile up, why not turn it into something useful and creative? That's exactly our advocacy website is here for, it is to help make that difference. MindCrafts is a community-driven platform that is dedicated to transforming discarded and what you thought were disposable items into valuable and useful creations. Whether you're passionate about sustainability, love DIY projects, or want to turn your crafts into cash, MindCrafts is the perfect place to start!</p>
 
-            
             <h2>What is MindCrafts?</h2>
 
             <p>MindCrafts is more than just a website—it’s a movement. We believe that creativity and innovation can solve the growing waste problem. By upcycling and doing innovative things to materials that would otherwise be thrown away, we give a new life to trash while reducing environmental impact. Our goal is simple: to inspire and empower people to see waste as an opportunity rather than a burden.</p>
 
-            
-            
             <h2>How Can You Get Involved?</h2>
 
             <p>Joining MindCrafts is simple. Here’s how you can be part of our community:</p>
