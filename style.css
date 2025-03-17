@@ -103,9 +103,9 @@ header {
 /* Hamburger Menu */
 .hamburger-menu {
     position: absolute;
-    top: 50px;
+    top: 50%;
     right: 20px;
-	transform: translateY(-50%);
+    transform: translateY(-50%);
     z-index: 1100;
     background: none;
     border: none;
@@ -115,8 +115,8 @@ header {
     justify-content: space-between;
     width: 35px;
     height: 30px;
-	font-size: 24px;
-	padding: 10px;
+    font-size: 30px;
+    padding: 10px;
 }
 
 /* Information Section Styling */
@@ -139,9 +139,9 @@ header {
     max-width: 350px; /* Adjust maximum width to fit within the container */
     padding: 10px; /* Adjusted padding */
     margin: 10px 0; /* Add margin to create space between boxes */
-    background: #f9f9f9;
+    background: rgba(15, 114, 41, 0.8); /* Green with slight transparency */
     border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px rgba(0.2, 0.1, 0.4, 0.4);
     text-align: center;
     max-height: 300px; /* Increased maximum height */
     overflow: hidden; /* Hide overflow content */
@@ -158,13 +158,13 @@ header {
 
 .info-box h2 {
     font-size: 1.6rem; /* Keeps a good heading size */
-    color: #333;
+    color: whitesmoke;
     margin-bottom: 5px; /* Adjusted margin */
 }
 
 .info-box p {
     font-size: 1rem; /* Maintains readability */
-    color: #666;
+    color: whitesmoke;
     margin: 5px 0; /* Adjusted margin */
 }
 
@@ -342,32 +342,44 @@ button:hover {
 
 .video-container {
     display: flex;
-    flex-direction: column;
+    flex: 1;
+    flex-direction: row; /* Change to row to align items horizontally */
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Align items to the left */
     text-align: center;
-    margin: 50px auto;
-    max-width: 800px;
+    max-width: 100%; /* Stretch to the right */
     position: relative;
+    background: rgba(255, 252, 252, 0.698); /* Change this to match the original navbar */
+    border: 2px solid black; /* Add black outline */
+    padding: 10px; /* Add padding to shrink the template */
+    cursor: pointer; /* Make the container clickable */
+}
+
+.video-container:hover video {
+    outline: 2px solid #008CBA; /* Highlight video on hover */
 }
 
 video {
-    width: 100%;
-    max-width: 800px;
+    width: 69%; /* Shrink the video width */
     border-radius: 15px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); /* Soft shadow */
 }
 
 .video-caption {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 15px;
     padding: 10px 20px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(176, 176, 176, 0.2);
     border-radius: 20px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 18px;
     max-width: 80%;
+    text-align: center; /* Center the text */
 }
 
 /* Poster Section */
@@ -475,7 +487,7 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 1px;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -517,6 +529,15 @@ footer.hide {
 
     nav {
         padding: 10px 0;
+    }
+    .navbar {
+        display: none; /* Hide the navbar on small screens */
+    }
+    .sidebar.active {
+        display: block; /* Show the sidebar when active */
+    }
+    .overlay.active {
+        display: block; /* Show the overlay when active */
     }
 }
 
