@@ -61,3 +61,28 @@ function displayHomepageProjects() {
 
 // ✅ Call this function when homepage loads
 window.onload = displayHomepageProjects;
+
+document.querySelectorAll('.video-container').forEach(container => {
+    container.addEventListener('click', () => {
+        const video = container.querySelector('video');
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+});
+
+function openPopup(popupId) {
+    const popup = document.getElementById(popupId);
+    if (popup) {
+        popup.style.display = 'flex'; // Adjusted to 'flex' for centering
+    }
+}
+
+function closePopup(popupId) {
+    const popup = document.getElementById(popupId);
+    if (popup) {
+        popup.style.display = 'none';
+    }
+}
