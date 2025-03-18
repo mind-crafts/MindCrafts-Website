@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="images/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uploaded Projects | MindCrafts</title>
@@ -70,10 +69,13 @@
     <section class="project-display">
         <h2>Community Projects</h2>
         <div id="projectsDisplay">
-            <p>Loading projects...</p>
+            <a href="https://www.facebook.com/share/p/18YxYm7ak6/" target="_blank" class="project-link">
+                <img src="images/pencilholder.png" alt="Facebook Project Preview" class="project-thumbnail">
+                <p>Check out this amazing project on Facebook!</p>
+            </a>
         </div>
     </section>
-
+    
     <div id="popup" class="popup">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup()">&times;</span>
@@ -82,7 +84,6 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="script-upload.js"></script>
     <script>
         function toggleMenu() {
             var sidebar = document.getElementById('sidebar');
