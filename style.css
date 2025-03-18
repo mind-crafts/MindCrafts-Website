@@ -755,12 +755,26 @@ nav a {
 }
 
 /* Responsive Fix */
-@media (max-width: 768px) {
-    .ProfilesContainer {
-        justify-content: center; /* Centers only on small screens */
+@media screen and (max-width: 768px) {
+    nav {
+        display: flex !important;
     }
 
-    .team-member {
-        width: 90%; /* Takes more space on small screens */
+    .secondary-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        top: 100px; /* Adjusted top */
+        background-color: rgba(0, 128, 0, 0.8);
+        padding:1px;
+        border-radius: 8px;
+        width: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        position: flex;
+        transform: translateX(-50%);
+        width: 50%; /* Makes it take more space on mobile */
+        max-width: 400px; /* Prevents it from becoming too large on wider screens */
+        }
     }
-}
