@@ -27,6 +27,28 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.addEventListener("click", toggleMenu);     // Click outside to close
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    let lastScrollTop = 0;
+    const navbar = document.querySelector("nav");
+    const secondaryNavbar = document.querySelector(".secondary-navbar");
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down - Minimize Navbars
+            navbar.classList.add("shrink");
+            secondaryNavbar.classList.add("shrink-secondary");
+        } else {
+            // Scrolling up - Restore Navbars
+            navbar.classList.remove("shrink");
+            secondaryNavbar.classList.remove("shrink-secondary");
+        }
+
+        scrollTop > lastScrollTop <= 0 ? 0 : scrollTop;
+    });
+});
+
 function openPopup() {
     let popup = document.getElementById("popup");
     popup.style.display = "flex"; // Ensures proper flex centering
@@ -38,7 +60,14 @@ function closePopup() {
 }
 
 function displayHomepageProjects() {
-    let projects = JSON.parse(localStorage.getItem("projects")) || [];
+    const projects = [
+        {
+            title: "Pencil Holder",
+            image: "images/pencilholder.png",  // Add actual preview image
+            link: "https://www.facebook.com/share/p/18YxYm7ak6/"
+        },
+    ];
+
     const display = document.getElementById("homepageProjectsDisplay");
 
     if (!display) return; // Prevents errors if the element doesn't exist
@@ -48,13 +77,12 @@ function displayHomepageProjects() {
         return;
     }
 
-    // Show only the **latest** 3 projects
-    display.innerHTML = projects.slice(-3).reverse().map(project => `
+    display.innerHTML = projects.map(project => `
         <div class="project-card">
-            <h3>${project.title}</h3>
-            <img src="${project.image}" width="250" alt="${project.title}">
-            <p>${project.description}</p>
-            ${project.video ? `<iframe src="${project.video}" width="250" height="150"></iframe>` : ""}
+            <a href="${project.link}" target="_blank">
+                <h3>${project.title}</h3>
+                <img src="${project.image}" width="250" alt="${project.title}">
+            </a>
         </div>
     `).join("");
 }
